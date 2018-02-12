@@ -322,7 +322,9 @@
 
   
     <div class="comments" id="comments">
-      <div id="uyan_frame"></div>
+      
+        <div id="gitment-container"></div>
+      
     </div>
 
   
@@ -604,14 +606,6 @@
 
 
   
-    
-
-    
-      <!-- UY BEGIN -->
-      <script type="text/javascript" src="http://v2.uyan.cc/code/uyan.js?uid=2157610"></script>
-      <!-- UY END -->
-    
-  
 
 
 
@@ -622,6 +616,43 @@
 
 
 
+
+
+<!-- LOCAL: You can save these files to your site and update links -->
+    
+        
+        <link rel="stylesheet" href="https://aimingoo.github.io/gitmint/style/default.css">
+        <script src="https://aimingoo.github.io/gitmint/dist/gitmint.browser.js"></script>
+    
+<!-- END LOCAL -->
+
+    
+
+    
+      <script type="text/javascript">
+      function renderGitment(){
+        var gitment = new Gitmint({
+            id: window.location.pathname,
+            owner: 'yunshu2009',
+            repo: 'gitment-repo',
+            
+            lang: "" || navigator.language || navigator.systemLanguage || navigator.userLanguage,
+            
+            oauth: {
+            
+            
+                client_secret: 'a9be7ded21f1466e536b37d31f5de664200d2e4c',
+            
+                client_id: '9495da16cda475a5e221'
+            }});
+        gitment.render('gitment-container');
+      }
+
+      
+      renderGitment();
+      
+      </script>
+    
 
 
 
