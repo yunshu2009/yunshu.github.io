@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://yunshu.me/about/index.html</loc>
+    
+    <lastmod>2018-02-12T15:48:37.000Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://yunshu.me/tags/index.html</loc>
     
     <lastmod>2018-02-12T15:47:42.000Z</lastmod>
@@ -19,13 +26,6 @@
     <loc>http://yunshu.me/2018/02/12/%E4%BD%BF%E7%94%A8Hexo%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/</loc>
     
     <lastmod>2018-02-12T15:34:32.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://yunshu.me/about/index.html</loc>
-    
-    <lastmod>2018-02-12T05:42:40.000Z</lastmod>
     
   </url>
   
