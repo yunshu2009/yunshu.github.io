@@ -1,0 +1,2 @@
+Sitemap: http://yunshu2009.github.io/sitemap.xml
+Sitemap: http://yunshu2009.github.io/baidusitemap.xml
