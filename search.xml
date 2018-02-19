@@ -1,6 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[使用SSR科学上网]]></title>
+    <url>%2F2018%2F02%2F19%2F%E4%BD%BF%E7%94%A8SSR%E7%A7%91%E5%AD%A6%E4%B8%8A%E7%BD%91%2F</url>
+    <content type="text"><![CDATA[使用一键安装脚本安装shadowsocksR参考：https://shadowsocks.be/9.html 123wget --no-check-certificate https://raw.githubusercontent.com/teddysun/shadowsocks_install/master/shadowsocksR.shchmod +x shadowsocksR.sh./shadowsocksR.sh 在CentOS 7上安装BBR加速参考： 部署方法：https://www.vultr.com/docs/how-to-deploy-google-bbr-on-centos-7) 一键安装脚本：https://github.com/teddysun/across/raw/master/bbr.sh 检测linux vps是xen openvz还是kvm的方法https://blog.slogra.com/post-632.html SSR客户端MAC客户端： https://github.com/qinyuhang/ShadowsocksX-NG-R/releases Linux客户端：https://raw.githubusercontent.com/the0demiurge/CharlesScripts/master/charles/bin/ssr Windows客户端：https://github.com/shadowsocksr-backup/shadowsocksr-csharp/releases IOS客户端：Potatso Lite、Potatso、shadowrocket (需要使用美区apple id下载软件) 参考链接 [1] (http://blog.sina.com.cn/s/blog_4891cbc50102x5lw.html)]]></content>
+      <tags>
+        <tag>科学上网</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[开发一个php扩展]]></title>
+    <url>%2F2018%2F02%2F18%2F%E5%BC%80%E5%8F%91%E4%B8%80%E4%B8%AAphp%E6%89%A9%E5%B1%95%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
     <title><![CDATA[使用Hexo搭建个人博客]]></title>
     <url>%2F2018%2F02%2F12%2F%E4%BD%BF%E7%94%A8Hexo%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%2F</url>
     <content type="text"><![CDATA[今天花了好多时间好好地倒腾了下个人博客，使用hexo + hexo next主题搭建。顺便在godaddy买了这个“yunshu.me”域名，24块钱，比阿里云便宜好多，哈哈。 搭建这个博客安装了好多npm包，有以下这些：…]]></content>
