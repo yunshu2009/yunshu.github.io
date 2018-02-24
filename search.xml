@@ -1,6 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[让github上fork的项目同步原项目]]></title>
+    <url>%2F2018%2F02%2F24%2F%E8%AE%A9github%E4%B8%8Afork%E7%9A%84%E9%A1%B9%E7%9B%AE%E5%90%8C%E6%AD%A5%E5%8E%9F%E9%A1%B9%E7%9B%AE%2F</url>
+    <content type="text"><![CDATA[1234567891011121314## 先clone到本地仓库git clone https://github.com/yunshu2009/think.git## 保持和远程仓库同步git remote add upstream https://github.com/top-think/think.git## 拉取远程仓库最新代码git fetch upstream## 合并到本地仓库git merge upstream/master## 及时更新最新改动git pull --rebase]]></content>
+      <tags>
+        <tag>git</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[使用SSR科学上网]]></title>
     <url>%2F2018%2F02%2F19%2F%E4%BD%BF%E7%94%A8SSR%E7%A7%91%E5%AD%A6%E4%B8%8A%E7%BD%91%2F</url>
     <content type="text"><![CDATA[使用一键安装脚本安装shadowsocksR参考：https://shadowsocks.be/9.html 123wget --no-check-certificate https://raw.githubusercontent.com/teddysun/shadowsocks_install/master/shadowsocksR.shchmod +x shadowsocksR.sh./shadowsocksR.sh 在CentOS 7上安装BBR加速参考： 部署方法：https://www.vultr.com/docs/how-to-deploy-google-bbr-on-centos-7) 一键安装脚本：https://github.com/teddysun/across/raw/master/bbr.sh 检测linux vps是xen openvz还是kvm的方法https://blog.slogra.com/post-632.html SSR客户端MAC客户端： https://github.com/qinyuhang/ShadowsocksX-NG-R/releases Linux客户端：https://raw.githubusercontent.com/the0demiurge/CharlesScripts/master/charles/bin/ssr Windows客户端：https://github.com/shadowsocksr-backup/shadowsocksr-csharp/releases IOS客户端：Potatso Lite、Potatso、shadowrocket (需要使用美区apple id下载软件) 参考链接 [1] (http://blog.sina.com.cn/s/blog_4891cbc50102x5lw.html)]]></content>
