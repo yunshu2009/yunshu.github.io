@@ -1,6 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[Redis的数据类型以及使用场景]]></title>
+    <url>%2F2018%2F02%2F25%2FRedis%E7%9A%84%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%E4%BB%A5%E5%8F%8A%E4%BD%BF%E7%94%A8%E5%9C%BA%E6%99%AF%2F</url>
+    <content type="text"><![CDATA[参考：https://mengkang.net/356.html]]></content>
+      <tags>
+        <tag>redis</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[让github上fork的项目同步原项目]]></title>
     <url>%2F2018%2F02%2F24%2F%E8%AE%A9github%E4%B8%8Afork%E7%9A%84%E9%A1%B9%E7%9B%AE%E5%90%8C%E6%AD%A5%E5%8E%9F%E9%A1%B9%E7%9B%AE%2F</url>
     <content type="text"><![CDATA[1234567891011121314## 先clone到本地仓库git clone https://github.com/yunshu2009/think.git## 保持和远程仓库同步git remote add upstream https://github.com/top-think/think.git## 拉取远程仓库最新代码git fetch upstream## 合并到本地仓库git merge upstream/master## 及时更新最新改动git pull --rebase]]></content>
