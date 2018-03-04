@@ -5,7 +5,7 @@
     <url>%2F2018%2F02%2F26%2F%E7%94%9F%E6%B4%BB%E5%94%A0%E5%8F%A8%2F</url>
     <content type="text"><![CDATA[有几个真相越早知道越好： 1）这世界上人很多，但能沟通的人其实没几个。 2）我们每天都想让世界倾听我们真诚的声音，却往往只得到傻逼的回响。 3）自己认为对的就坚持，因为每个人都觉得自己是对的，也不缺自己这一个。 4）企图是说服一个人的时候，一定要分清楚是想说道理，还是想提升对方的智商。]]></content>
       <tags>
-        <tag>生活, 鸡汤</tag>
+        <tag>生活,鸡汤</tag>
       </tags>
   </entry>
   <entry>
@@ -65,9 +65,6 @@
     <title><![CDATA[使用Hexo搭建个人博客]]></title>
     <url>%2F2018%2F02%2F12%2F%E4%BD%BF%E7%94%A8Hexo%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%2F</url>
     <content type="text"><![CDATA[今天花了好多时间好好地倒腾了下个人博客，使用hexo + hexo next主题搭建。顺便在godaddy买了这个“yunshu.me”域名，24块钱，比阿里云便宜好多，哈哈。 搭建这个博客安装了好多npm包，有以下这些：…]]></content>
-      <categories>
-        <category>分类</category>
-      </categories>
       <tags>
         <tag>技术</tag>
       </tags>
