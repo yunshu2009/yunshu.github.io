@@ -111,7 +111,7 @@
 <meta property="og:site_name" content="云舒的个人博客">
 <meta property="og:description" content="使用一键安装脚本安装shadowsocksR参考：https://shadowsocks.be/9.html  123wget --no-check-certificate https://raw.githubusercontent.com/teddysun/shadowsocks_install/master/shadowsocksR.shchmod +x shadowsocksR.sh./sh">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2018-02-24T15:03:06.000Z">
+<meta property="og:updated_time" content="2018-03-06T04:21:38.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="使用SSR科学上网">
 <meta name="twitter:description" content="使用一键安装脚本安装shadowsocksR参考：https://shadowsocks.be/9.html  123wget --no-check-certificate https://raw.githubusercontent.com/teddysun/shadowsocks_install/master/shadowsocksR.shchmod +x shadowsocksR.sh./sh">
@@ -394,9 +394,14 @@
 <p>Linux客户端：<br><a href="https://raw.githubusercontent.com/the0demiurge/CharlesScripts/master/charles/bin/ssr" target="_blank" rel="noopener">https://raw.githubusercontent.com/the0demiurge/CharlesScripts/master/charles/bin/ssr</a></p>
 <p>Windows客户端：<br><a href="https://github.com/shadowsocksr-backup/shadowsocksr-csharp/releases" target="_blank" rel="noopener">https://github.com/shadowsocksr-backup/shadowsocksr-csharp/releases</a></p>
 <p>IOS客户端：Potatso Lite、Potatso、shadowrocket (需要使用美区apple id下载软件)</p>
-<h2 id="参考链接"><a href="#参考链接" class="headerlink" title="参考链接"></a>参考链接</h2><ul>
-<li>[1] (<a href="http://blog.sina.com.cn/s/blog_4891cbc50102x5lw.html" target="_blank" rel="noopener">http://blog.sina.com.cn/s/blog_4891cbc50102x5lw.html</a>)</li>
+<h2 id="SSR多用户配置"><a href="#SSR多用户配置" class="headerlink" title="SSR多用户配置"></a>SSR多用户配置</h2><p>配置文件如下</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">&quot;server&quot;:&quot;0.0.0.0&quot;,</span><br><span class="line">&quot;server_ipv6&quot;: &quot;[::]&quot;,</span><br><span class="line">&quot;local_address&quot;:&quot;127.0.0.1&quot;,</span><br><span class="line">&quot;local_port&quot;:1080,</span><br><span class="line">&quot;port_password&quot;:&#123;</span><br><span class="line">    &quot;8989&quot;:&quot;password1&quot;,//着里输入想要的端口和密码</span><br><span class="line">    &quot;8990&quot;:&quot;password2&quot;，</span><br><span class="line">    &quot;8991&quot;:&quot;password3&quot;</span><br><span class="line">&#125;,</span><br><span class="line">&quot;timeout&quot;:300,</span><br><span class="line">&quot;method&quot;:&quot;aes-256-cfb&quot;,//加密方式可以修改也可以不修改本人用chacha20</span><br><span class="line">&quot;protocol&quot;: &quot;origin&quot;,//协议也是可以修改了本人用auth_sha1</span><br><span class="line">&quot;protocol_param&quot;: &quot;&quot;,</span><br><span class="line">&quot;obfs&quot;: &quot;plain&quot;,//这里很重要,免流的请注意必须修改,本人用http_simple</span><br><span class="line">&quot;obfs_param&quot;: &quot;&quot;,</span><br><span class="line">&quot;redirect&quot;: &quot;&quot;,</span><br><span class="line">&quot;dns_ipv6&quot;: false,</span><br><span class="line">&quot;fast_open&quot;: false,</span><br><span class="line">&quot;workers&quot;: 1</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>然后修改防火墙，添加上面添加的端口即可，重启防火墙和SSR即可。</p>
+<p>参考链接：<a href="https://www.cnblogs.com/gne-hwz/p/6662000.html" target="_blank" rel="noopener">https://www.cnblogs.com/gne-hwz/p/6662000.html</a> </p>
+<h2 id="其他参考"><a href="#其他参考" class="headerlink" title="其他参考"></a>其他参考</h2><ul>
+<li><a href="http://blog.sina.com.cn/s/blog_4891cbc50102x5lw.html" target="_blank" rel="noopener">http://blog.sina.com.cn/s/blog_4891cbc50102x5lw.html</a></li>
 </ul>
+<h2 id="SSR共享"><a href="#SSR共享" class="headerlink" title="SSR共享"></a>SSR共享</h2><p>如果你感觉梯子搭建麻烦，也可联系我共享SSR ~~</p>
 
       
     </div>
@@ -748,7 +753,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#使用一键安装脚本安装shadowsocksR"><span class="nav-number">1.</span> <span class="nav-text">使用一键安装脚本安装shadowsocksR</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#在CentOS-7上安装BBR加速"><span class="nav-number">2.</span> <span class="nav-text">在CentOS 7上安装BBR加速</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#检测linux-vps是xen-openvz还是kvm的方法"><span class="nav-number">3.</span> <span class="nav-text">检测linux vps是xen openvz还是kvm的方法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#SSR客户端"><span class="nav-number">4.</span> <span class="nav-text">SSR客户端</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#参考链接"><span class="nav-number">5.</span> <span class="nav-text">参考链接</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#使用一键安装脚本安装shadowsocksR"><span class="nav-number">1.</span> <span class="nav-text">使用一键安装脚本安装shadowsocksR</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#在CentOS-7上安装BBR加速"><span class="nav-number">2.</span> <span class="nav-text">在CentOS 7上安装BBR加速</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#检测linux-vps是xen-openvz还是kvm的方法"><span class="nav-number">3.</span> <span class="nav-text">检测linux vps是xen openvz还是kvm的方法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#SSR客户端"><span class="nav-number">4.</span> <span class="nav-text">SSR客户端</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#SSR多用户配置"><span class="nav-number">5.</span> <span class="nav-text">SSR多用户配置</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#其他参考"><span class="nav-number">6.</span> <span class="nav-text">其他参考</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#SSR共享"><span class="nav-number">7.</span> <span class="nav-text">SSR共享</span></a></li></ol></div>
             
 
           </div>
