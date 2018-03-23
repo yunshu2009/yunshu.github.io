@@ -103,19 +103,19 @@
   <meta name="keywords" content="mysql," />
 
 
-<meta name="description" content="一些笔记/学习总结，写的不好，欢迎拍砖^ ^ 更新时间2017-3-20 23:52   关系型数据库关系型数据库的三范式第一范式（1NF）: 每一列都是不可分割的原子数据项(基本类型列)  第二范式（2NF）： 要求实体的属性完全依赖于主关键字(无重复行)  第三范式（3NF）: 数据表不包含其它表已有的非主属性(无数据冗余) 关于数据库的规范设计，都会谈到是否符合三范式。但是考虑到数据库的性能">
+<meta name="description" content="关系型数据库关系型数据库的三范式第一范式（1NF）: 每一列都是不可分割的原子数据项(基本类型列)  第二范式（2NF）： 要求实体的属性完全依赖于主关键字(无重复行)  第三范式（3NF）: 数据表不包含其它表已有的非主属性(无数据冗余) 关于数据库的规范设计，都会谈到是否符合三范式。但是考虑到数据库的性能优化，也不必都按照三范式来设计，可以做数据的适当冗余。如为了查询效率，在商品表，可以设置个">
 <meta name="keywords" content="mysql">
 <meta property="og:type" content="article">
 <meta property="og:title" content="一些数据库知识点学习总结">
-<meta property="og:url" content="http://yunshu.me/2018/03/20/一些数据库知识点学习总结/index.html">
+<meta property="og:url" content="http://yunshu.me/2018/03/20/Mysql数据库学习总结/index.html">
 <meta property="og:site_name" content="云舒的个人博客">
-<meta property="og:description" content="一些笔记/学习总结，写的不好，欢迎拍砖^ ^ 更新时间2017-3-20 23:52   关系型数据库关系型数据库的三范式第一范式（1NF）: 每一列都是不可分割的原子数据项(基本类型列)  第二范式（2NF）： 要求实体的属性完全依赖于主关键字(无重复行)  第三范式（3NF）: 数据表不包含其它表已有的非主属性(无数据冗余) 关于数据库的规范设计，都会谈到是否符合三范式。但是考虑到数据库的性能">
+<meta property="og:description" content="关系型数据库关系型数据库的三范式第一范式（1NF）: 每一列都是不可分割的原子数据项(基本类型列)  第二范式（2NF）： 要求实体的属性完全依赖于主关键字(无重复行)  第三范式（3NF）: 数据表不包含其它表已有的非主属性(无数据冗余) 关于数据库的规范设计，都会谈到是否符合三范式。但是考虑到数据库的性能优化，也不必都按照三范式来设计，可以做数据的适当冗余。如为了查询效率，在商品表，可以设置个">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="http://static.yunshudm.com/2017/3/wKiom1LUF8DS1inQAAE8bwOlNTY150.jpg">
-<meta property="og:updated_time" content="2018-03-20T16:01:34.000Z">
+<meta property="og:updated_time" content="2018-03-23T04:26:46.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="一些数据库知识点学习总结">
-<meta name="twitter:description" content="一些笔记/学习总结，写的不好，欢迎拍砖^ ^ 更新时间2017-3-20 23:52   关系型数据库关系型数据库的三范式第一范式（1NF）: 每一列都是不可分割的原子数据项(基本类型列)  第二范式（2NF）： 要求实体的属性完全依赖于主关键字(无重复行)  第三范式（3NF）: 数据表不包含其它表已有的非主属性(无数据冗余) 关于数据库的规范设计，都会谈到是否符合三范式。但是考虑到数据库的性能">
+<meta name="twitter:description" content="关系型数据库关系型数据库的三范式第一范式（1NF）: 每一列都是不可分割的原子数据项(基本类型列)  第二范式（2NF）： 要求实体的属性完全依赖于主关键字(无重复行)  第三范式（3NF）: 数据表不包含其它表已有的非主属性(无数据冗余) 关于数据库的规范设计，都会谈到是否符合三范式。但是考虑到数据库的性能优化，也不必都按照三范式来设计，可以做数据的适当冗余。如为了查询效率，在商品表，可以设置个">
 <meta name="twitter:image" content="http://static.yunshudm.com/2017/3/wKiom1LUF8DS1inQAAE8bwOlNTY150.jpg">
 
 
@@ -123,7 +123,7 @@
 
 
 
-  <link rel="canonical" href="http://yunshu.me/2018/03/20/一些数据库知识点学习总结/"/>
+  <link rel="canonical" href="http://yunshu.me/2018/03/20/Mysql数据库学习总结/"/>
 
 
 
@@ -295,7 +295,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yunshu.me/2018/03/20/一些数据库知识点学习总结/">
+    <link itemprop="mainEntityOfPage" href="http://yunshu.me/2018/03/20/Mysql数据库学习总结/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="yunshu">
@@ -342,8 +342,8 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/2018/03/20/一些数据库知识点学习总结/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count gitment-comments-count" data-xid="/2018/03/20/一些数据库知识点学习总结/" itemprop="commentsCount"></span>
+                <a href="/2018/03/20/Mysql数据库学习总结/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count gitment-comments-count" data-xid="/2018/03/20/Mysql数据库学习总结/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -351,7 +351,7 @@
 
           
           
-             <span id="/2018/03/20/一些数据库知识点学习总结/" class="leancloud_visitors" data-flag-title="一些数据库知识点学习总结">
+             <span id="/2018/03/20/Mysql数据库学习总结/" class="leancloud_visitors" data-flag-title="一些数据库知识点学习总结">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -383,10 +383,7 @@
       
 
       
-        <p>一些笔记/学习总结，写的不好，欢迎拍砖^ ^ 更新时间2017-3-20 23:52</p>
-<hr>
-
-<h2 id="关系型数据库"><a href="#关系型数据库" class="headerlink" title="关系型数据库"></a>关系型数据库</h2><h3 id="关系型数据库的三范式"><a href="#关系型数据库的三范式" class="headerlink" title="关系型数据库的三范式"></a>关系型数据库的三范式</h3><p>第一范式（1NF）: 每一列都是不可分割的原子数据项(基本类型列) </p>
+        <h2 id="关系型数据库"><a href="#关系型数据库" class="headerlink" title="关系型数据库"></a>关系型数据库</h2><h3 id="关系型数据库的三范式"><a href="#关系型数据库的三范式" class="headerlink" title="关系型数据库的三范式"></a>关系型数据库的三范式</h3><p>第一范式（1NF）: 每一列都是不可分割的原子数据项(基本类型列) </p>
 <p>第二范式（2NF）： 要求实体的属性完全依赖于主关键字(无重复行) </p>
 <p>第三范式（3NF）: 数据表不包含其它表已有的非主属性(无数据冗余)</p>
 <p>关于数据库的规范设计，都会谈到是否符合三范式。但是考虑到数据库的性能优化，也不必都按照三范式来设计，可以做数据的适当冗余。如为了查询效率，在商品表，可以设置个img_url字段放图片的主图。</p>
@@ -396,11 +393,6 @@
 <p>2.第二层架构主要完成大多的核心服务功能，如SQL接口，并完成缓存的查询，SQL的分析和优化及部分内置函数的执行。所有跨存储引擎的功能也在这一层实现，如过程、函数等。在该层，服务器会解析查询并创建相应的内部解析树，并对其完成相应的优化如确定查询表的顺序，是否利用索引等，最后生成相应的执行操作。如果是select语句，服务器还会查询内部的缓存。如果缓存空间足够大，这样在解决大量读操作的环境中能够很好的提升系统的性能。</p>
 <p>3.存储引擎层，存储引擎真正的负责了MySQL中数据的存储和提取，服务器通过API与存储引擎进行通信。不同的存储引擎具有的功能不同，这样我们可以根据自己的实际需要进行选取。</p>
 <p>4.数据存储层，主要是将数据存储在运行于裸设备的文件系统之上，并完成与存储引擎的交互。</p>
-<h4 id="存储引擎的区别和选择"><a href="#存储引擎的区别和选择" class="headerlink" title="存储引擎的区别和选择"></a>存储引擎的区别和选择</h4><p>存储引擎是mysql提供的文件访问层的一个抽象接口来定制一种文件访问机制。 </p>
-<p>mysql的存储引擎包括:MyISAM、InnoDB、BDB、MEMORY、MERGE、<br>EXAMPLE、NDBCluster、ARCHIVE、CSV、BLACKHOLE、FEDERATED等。</p>
-<p>MyISAM:不支持事务,支持全文索引,表级锁；数据文件全量备份，可以直接拷贝数据文件进行备份；适合处理读频率远大于写频率。</p>
-<p>InnoDB:支持事务,5.6以后支持全文索引,默认行级锁；数据文件两种形式(单一文件形式和多文件形式,以共享表空间与独占表空间存储)；适用于高并发读写。</p>
-<h5 id="MySQL-InnoDB的存储文件"><a href="#MySQL-InnoDB的存储文件" class="headerlink" title="MySQL InnoDB的存储文件"></a>MySQL InnoDB的存储文件</h5><p>参考：<a href="http://blog.csdn.net/chenjiayi_yun/article/details/45533909" target="_blank" rel="noopener">http://blog.csdn.net/chenjiayi_yun/article/details/45533909</a></p>
 <h4 id="MySQL核心模块"><a href="#MySQL核心模块" class="headerlink" title="MySQL核心模块"></a>MySQL核心模块</h4><pre>
 • Server Initialization Module 命令行、配置文件解析、内存分配
 • Connection Manager 协议监听和协议转发
@@ -426,9 +418,14 @@
 • Core API 核心 API
 </pre>
 
+<h4 id="存储引擎的区别和选择"><a href="#存储引擎的区别和选择" class="headerlink" title="存储引擎的区别和选择"></a>存储引擎的区别和选择</h4><p>存储引擎是mysql提供的文件访问层的一个抽象接口来定制一种文件访问机制。 </p>
+<p>mysql的存储引擎包括:MyISAM、InnoDB、BDB、MEMORY、MERGE、<br>EXAMPLE、NDBCluster、ARCHIVE、CSV、BLACKHOLE、FEDERATED等。</p>
+<p>MyISAM:不支持事务,支持全文索引,表级锁；数据文件全量备份，可以直接拷贝数据文件进行备份；适合处理读频率远大于写频率的静态表。</p>
+<p>InnoDB:支持事务,5.6以后支持全文索引,默认行级锁；数据文件两种形式(单一文件形式和多文件形式,以共享表空间与独占表空间存储)；适用于高并发读写。</p>
+<h5 id="MySQL-InnoDB的存储文件"><a href="#MySQL-InnoDB的存储文件" class="headerlink" title="MySQL InnoDB的存储文件"></a>MySQL InnoDB的存储文件</h5><p>参考：<a href="http://blog.csdn.net/chenjiayi_yun/article/details/45533909" target="_blank" rel="noopener">http://blog.csdn.net/chenjiayi_yun/article/details/45533909</a></p>
 <h3 id="MySQL插件"><a href="#MySQL插件" class="headerlink" title="MySQL插件"></a>MySQL插件</h3><p>NoSql 插件 HandlerSocket</p>
 <p>中文全文索引插件 mysqlcft （mysql5.7内置有n-gram parser插件）</p>
-<p>新存储引擎XtraDB 可能成为InnoDB存储引擎的替代</p>
+<p>InnoDB引擎中的Memcached插件</p>
 <h3 id="MySQL中的事务"><a href="#MySQL中的事务" class="headerlink" title="MySQL中的事务"></a>MySQL中的事务</h3><p>事务的ACID:<br>• 原子性(Atomicity ) 全部执行或全部不执行</p>
 <p>• 一致性( Consistency ) 事务前后数据都是一致性状态,约束等</p>
 <p>• 隔离性或独立性( Isolation) 事务之间是独立的,和级别相关</p>
@@ -516,12 +513,8 @@ mysql> show status like 'innodb_row_lock%';
 <li>查找出limit的开始行id，然后用where拼接，如：<code>where id&gt;*** limit 0,99</code></li>
 <li>产品设计优化</li>
 </ol>
-<h2 id="MySQL的安装与配置"><a href="#MySQL的安装与配置" class="headerlink" title="MySQL的安装与配置"></a>MySQL的安装与配置</h2><h3 id="MySQL源码安装-下面在CentOS环境下安装、参考Oneinstack"><a href="#MySQL源码安装-下面在CentOS环境下安装、参考Oneinstack" class="headerlink" title="MySQL源码安装(下面在CentOS环境下安装、参考Oneinstack)"></a>MySQL源码安装(下面在CentOS环境下安装、参考Oneinstack)</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"># 下载mysql源码包</span><br><span class="line">wget -4 --tries=6 -c --no-check-certificate https://mirrors.tuna.tsinghua.edu.cn/mysql/downloads/MySQL-5.7/mysql-5.7.21.tar.gz</span><br><span class="line"># 进入软件目录</span><br><span class="line">pushd /opt/software/src</span><br><span class="line"># 添加mysql用户</span><br><span class="line">useradd -M -s /sbin/nologin mysql</span><br><span class="line"># 创建mysql的安装目录</span><br><span class="line">mkdir -p /usr/local/mysql</span><br><span class="line"># 创建mysql data目录</span><br><span class="line">mkdir -p /data/mysql</span><br><span class="line"># 更改mysql data目录权限</span><br><span class="line">chown mysql.mysql -R /data/mysql</span><br><span class="line">tar xzf mysql-5.7.21.tar.gz</span><br><span class="line">pushd mysql-5.7.21</span><br><span class="line">cmake . -DCMAKE_INSTALL_PREFIX=/usr/local/mysql</span><br><span class="line">    -DMYSQL_DATADIR=/data/mysql \</span><br><span class="line">    -DSYSCONFDIR=/etc \</span><br><span class="line">    -DWITH_INNOBASE_STORAGE_ENGINE=1 \</span><br><span class="line">    -DWITH_PARTITION_STORAGE_ENGINE=1 \</span><br><span class="line">    -DWITH_FEDERATED_STORAGE_ENGINE=1 \</span><br><span class="line">    -DWITH_BLACKHOLE_STORAGE_ENGINE=1 \</span><br><span class="line">    -DWITH_MYISAM_STORAGE_ENGINE=1 \</span><br><span class="line">    -DWITH_EMBEDDED_SERVER=1 \</span><br><span class="line">    -DENABLE_DTRACE=0 \</span><br><span class="line">    -DENABLED_LOCAL_INFILE=1 \</span><br><span class="line">    -DDEFAULT_CHARSET=utf8mb4 \</span><br><span class="line">    -DDEFAULT_COLLATION=utf8mb4_general_ci \</span><br><span class="line">    -DEXTRA_CHARSETS=all \</span><br><span class="line">    -DCMAKE_EXE_LINKER_FLAGS=&apos;-ljemalloc&apos;</span><br><span class="line">make</span><br><span class="line">make install</span><br><span class="line">popd</span><br><span class="line">rm -rf mysql-5.7.21</span><br><span class="line">cp /usr/local/mysql/support-files/mysql.server /etc/init.d/mysqld</span><br><span class="line">sed -i &quot;s@^basedir=.*@basedir=/usr/local/mysql@&quot; /etc/init.d/mysqld</span><br><span class="line">sed -i &quot;s@^datadir=.*@datadir=/data/mysql@&quot; /etc/init.d/mysqld</span><br><span class="line">chmod +x /etc/init.d/mysqld</span><br><span class="line">chkconfig --add mysqld</span><br><span class="line">chkconfig mysqld on</span><br><span class="line"># 添加mysql配置</span><br><span class="line"> cat &gt; /etc/my.cnf &lt;&lt; EOF</span><br><span class="line">[client]</span><br><span class="line">port = 3306</span><br><span class="line">socket = /tmp/mysql.sock</span><br><span class="line">default-character-set = utf8mb4</span><br><span class="line">[mysql]</span><br><span class="line">prompt=&quot;MySQL [\\d]&gt; &quot;</span><br><span class="line">no-auto-rehash</span><br><span class="line">[mysqld]</span><br><span class="line">port = 3306</span><br><span class="line">socket = /tmp/mysql.sock</span><br><span class="line">basedir = /usr/local/mysql</span><br><span class="line">datadir = /data/mysql</span><br><span class="line">pid-file = /data/mysql/mysql.pid</span><br><span class="line">user = mysql</span><br><span class="line">bind-address = 0.0.0.0</span><br><span class="line">server-id = 1</span><br><span class="line">init-connect = &apos;SET NAMES utf8mb4&apos;</span><br><span class="line">character-set-server = utf8mb4</span><br><span class="line">skip-name-resolve</span><br><span class="line">#skip-networking</span><br><span class="line">back_log = 300</span><br><span class="line">max_connections = 1000</span><br><span class="line">max_connect_errors = 6000</span><br><span class="line">open_files_limit = 65535</span><br><span class="line">table_open_cache = 128</span><br><span class="line">max_allowed_packet = 500M</span><br><span class="line">binlog_cache_size = 1M</span><br><span class="line">max_heap_table_size = 8M</span><br><span class="line">tmp_table_size = 16M</span><br><span class="line">read_buffer_size = 2M</span><br><span class="line">read_rnd_buffer_size = 8M</span><br><span class="line">sort_buffer_size = 8M</span><br><span class="line">join_buffer_size = 8M</span><br><span class="line">key_buffer_size = 4M</span><br><span class="line">thread_cache_size = 8</span><br><span class="line">query_cache_type = 1</span><br><span class="line">query_cache_size = 8M</span><br><span class="line">query_cache_limit = 2M</span><br><span class="line">ft_min_word_len = 4</span><br><span class="line">log_bin = mysql-bin</span><br><span class="line">binlog_format = mixed</span><br><span class="line">expire_logs_days = 7</span><br><span class="line">log_error = /dta/mysql/mysql-error.log</span><br><span class="line">slow_query_log = 1</span><br><span class="line">long_query_time = 1</span><br><span class="line">slow_query_log_file = /data/mysql/mysql-slow.log</span><br><span class="line">performance_schema = 0</span><br><span class="line">explicit_defaults_for_timestamp</span><br><span class="line">#lower_case_table_names = 1</span><br><span class="line">skip-external-locking</span><br><span class="line">default_storage_engine = InnoDB</span><br><span class="line">#default-storage-engine = MyISAM</span><br><span class="line">innodb_file_per_table = 1</span><br><span class="line">innodb_open_files = 500</span><br><span class="line">innodb_buffer_pool_size = 64M</span><br><span class="line">innodb_write_io_threads = 4</span><br><span class="line">innodb_read_io_threads = 4</span><br><span class="line">innodb_thread_concurrency = 0</span><br><span class="line">innodb_purge_threads = 1</span><br><span class="line">innodb_flush_log_at_trx_commit = 2</span><br><span class="line">innodb_log_buffer_size = 2M</span><br><span class="line">innodb_log_file_size = 32M</span><br><span class="line">innodb_log_files_in_group = 3</span><br><span class="line">innodb_max_dirty_pages_pct = 90</span><br><span class="line">innodb_lock_wait_timeout = 120</span><br><span class="line">bulk_insert_buffer_size = 8M</span><br><span class="line">myisam_sort_buffer_size = 8M</span><br><span class="line">myisam_max_sort_file_size = 10G</span><br><span class="line">myisam_repair_threads = 1</span><br><span class="line">interactive_timeout = 28800</span><br><span class="line">wait_timeout = 28800</span><br><span class="line">[mysqldump]</span><br><span class="line">quick</span><br><span class="line">max_allowed_packet = 500M</span><br><span class="line">[myisamchk]</span><br><span class="line">key_buffer_size = 8M</span><br><span class="line">sort_buffer_size = 8M</span><br><span class="line">read_buffer = 4M</span><br><span class="line">write_buffer = 4M</span><br><span class="line">EOF</span><br><span class="line"># 数据库初始化</span><br><span class="line">/usr/local/mysql/bin/mysqld --initialize-insecure --user=mysql --basedir=/usr/local/mysql --datadir=/data/mysql</span><br><span class="line">chown mysql.mysql -R /data/mysql</span><br><span class="line">service mysqld start</span><br><span class="line"># 设置环境变量</span><br><span class="line">echo &quot;export PATH=/usr/local/mysql/bin:\$PATH&quot; &gt;&gt; /etc/profile</span><br><span class="line">[ -z &quot;$(grep ^&apos;export PATH=&apos; /etc/profile)&quot; ] &amp;&amp; echo &quot;export PATH=/usr/local/mysql/bin:\$PATH&quot; &gt;&gt; /etc/profile</span><br><span class="line">[ -n &quot;$(grep ^&apos;export PATH=&apos; /etc/profile)&quot; -a -z &quot;$(grep /usr/local/mysql /etc/profile)&quot; ] &amp;&amp; sed -i &quot;s@^export PATH=\(.*\)@export PATH=/usr/local/mysql/bin:\1@&quot; /etc/profile</span><br><span class="line"># 设置密码</span><br><span class="line">/usr/local/mysql/bin/mysql -e &quot;grant all privileges on *.* to root@&apos;127.0.0.1&apos; identified by &quot;123456&quot; with grant option;&quot;</span><br><span class="line">/usr/local/mysql/bin/mysql -e &quot;grant all privileges on *.* to root@&apos;localhost&apos; identified by &quot;123456&quot; with grant option;&quot;</span><br><span class="line"># 添加动态链接库</span><br><span class="line">echo &quot;/usr/local/mysql/lib&quot; &gt; /etc/ld.so.conf.d/mysql.conf</span><br><span class="line">ldconfig</span><br><span class="line">service mysqld restart</span><br></pre></td></tr></table></figure>
-<h3 id="一些配置"><a href="#一些配置" class="headerlink" title="一些配置"></a>一些配置</h3><p>skip-name-resolve：禁止掉DNS的查询</p>
-<blockquote>
-<p>解释：<br>mysql会在用户登录过程中对客户端IP进行DNS反查，不管你是使用IP登录还是域名登录，这个反查的过程都是在的。所以如果你的mysql所在的服务器的DNS有问题或者质量不好，那么就有可能造成127.0.0.1登录很快，用域名或者IP登录数据库很慢的DNS解析问题。</p>
-<p>数据库加这个参数速度会变快skip-name-resolve，但是也有注意点，mysql.user 表里面的host不要用localhost之类的，要用127.0.0.1，不然连自己都连不上数据库，会报错。</p>
-</blockquote>
+<h2 id="MySQL的安装与配置"><a href="#MySQL的安装与配置" class="headerlink" title="MySQL的安装与配置"></a>MySQL的安装与配置</h2><h3 id="MySQL源码安装"><a href="#MySQL源码安装" class="headerlink" title="MySQL源码安装"></a>MySQL源码安装</h3><p>下面在CentOS环境下安装、参考Oneinstack</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"># 下载mysql源码包</span><br><span class="line">wget -4 --tries=6 -c --no-check-certificate https://mirrors.tuna.tsinghua.edu.cn/mysql/downloads/MySQL-5.7/mysql-5.7.21.tar.gz</span><br><span class="line"># 进入软件目录</span><br><span class="line">pushd /opt/software/src</span><br><span class="line"># 添加mysql用户</span><br><span class="line">useradd -M -s /sbin/nologin mysql</span><br><span class="line"># 创建mysql的安装目录</span><br><span class="line">mkdir -p /usr/local/mysql</span><br><span class="line"># 创建mysql data目录</span><br><span class="line">mkdir -p /data/mysql</span><br><span class="line"># 更改mysql data目录权限</span><br><span class="line">chown mysql.mysql -R /data/mysql</span><br><span class="line">tar xzf mysql-5.7.21.tar.gz</span><br><span class="line">pushd mysql-5.7.21</span><br><span class="line">cmake . -DCMAKE_INSTALL_PREFIX=/usr/local/mysql</span><br><span class="line">    -DMYSQL_DATADIR=/data/mysql \</span><br><span class="line">    -DSYSCONFDIR=/etc \</span><br><span class="line">    -DWITH_INNOBASE_STORAGE_ENGINE=1 \</span><br><span class="line">    -DWITH_PARTITION_STORAGE_ENGINE=1 \</span><br><span class="line">    -DWITH_FEDERATED_STORAGE_ENGINE=1 \</span><br><span class="line">    -DWITH_BLACKHOLE_STORAGE_ENGINE=1 \</span><br><span class="line">    -DWITH_MYISAM_STORAGE_ENGINE=1 \</span><br><span class="line">    -DWITH_EMBEDDED_SERVER=1 \</span><br><span class="line">    -DENABLE_DTRACE=0 \</span><br><span class="line">    -DENABLED_LOCAL_INFILE=1 \</span><br><span class="line">    -DDEFAULT_CHARSET=utf8mb4 \</span><br><span class="line">    -DDEFAULT_COLLATION=utf8mb4_general_ci \</span><br><span class="line">    -DEXTRA_CHARSETS=all \</span><br><span class="line">    -DCMAKE_EXE_LINKER_FLAGS=&apos;-ljemalloc&apos;</span><br><span class="line">make</span><br><span class="line">make install</span><br><span class="line">popd</span><br><span class="line">rm -rf mysql-5.7.21</span><br><span class="line">cp /usr/local/mysql/support-files/mysql.server /etc/init.d/mysqld</span><br><span class="line">sed -i &quot;s@^basedir=.*@basedir=/usr/local/mysql@&quot; /etc/init.d/mysqld</span><br><span class="line">sed -i &quot;s@^datadir=.*@datadir=/data/mysql@&quot; /etc/init.d/mysqld</span><br><span class="line">chmod +x /etc/init.d/mysqld</span><br><span class="line">chkconfig --add mysqld</span><br><span class="line">chkconfig mysqld on</span><br><span class="line"># 添加mysql配置</span><br><span class="line"> cat &gt; /etc/my.cnf &lt;&lt; EOF</span><br><span class="line">[client]</span><br><span class="line">port = 3306</span><br><span class="line">socket = /tmp/mysql.sock</span><br><span class="line">default-character-set = utf8mb4</span><br><span class="line">[mysql]</span><br><span class="line">prompt=&quot;MySQL [\\d]&gt; &quot;</span><br><span class="line">no-auto-rehash</span><br><span class="line">[mysqld]</span><br><span class="line">port = 3306</span><br><span class="line">socket = /tmp/mysql.sock</span><br><span class="line">basedir = /usr/local/mysql</span><br><span class="line">datadir = /data/mysql</span><br><span class="line">pid-file = /data/mysql/mysql.pid</span><br><span class="line">user = mysql</span><br><span class="line">bind-address = 0.0.0.0</span><br><span class="line">server-id = 1</span><br><span class="line">init-connect = &apos;SET NAMES utf8mb4&apos;</span><br><span class="line">character-set-server = utf8mb4</span><br><span class="line">skip-name-resolve</span><br><span class="line">#skip-networking</span><br><span class="line">back_log = 300</span><br><span class="line">max_connections = 1000</span><br><span class="line">max_connect_errors = 6000</span><br><span class="line">open_files_limit = 65535</span><br><span class="line">table_open_cache = 128</span><br><span class="line">max_allowed_packet = 500M</span><br><span class="line">binlog_cache_size = 1M</span><br><span class="line">max_heap_table_size = 8M</span><br><span class="line">tmp_table_size = 16M</span><br><span class="line">read_buffer_size = 2M</span><br><span class="line">read_rnd_buffer_size = 8M</span><br><span class="line">sort_buffer_size = 8M</span><br><span class="line">join_buffer_size = 8M</span><br><span class="line">key_buffer_size = 4M</span><br><span class="line">thread_cache_size = 8</span><br><span class="line">query_cache_type = 1</span><br><span class="line">query_cache_size = 8M</span><br><span class="line">query_cache_limit = 2M</span><br><span class="line">ft_min_word_len = 4</span><br><span class="line">log_bin = mysql-bin</span><br><span class="line">binlog_format = mixed</span><br><span class="line">expire_logs_days = 7</span><br><span class="line">log_error = /dta/mysql/mysql-error.log</span><br><span class="line">slow_query_log = 1</span><br><span class="line">long_query_time = 1</span><br><span class="line">slow_query_log_file = /data/mysql/mysql-slow.log</span><br><span class="line">performance_schema = 0</span><br><span class="line">explicit_defaults_for_timestamp</span><br><span class="line">#lower_case_table_names = 1</span><br><span class="line">skip-external-locking</span><br><span class="line">default_storage_engine = InnoDB</span><br><span class="line">#default-storage-engine = MyISAM</span><br><span class="line">innodb_file_per_table = 1</span><br><span class="line">innodb_open_files = 500</span><br><span class="line">innodb_buffer_pool_size = 64M</span><br><span class="line">innodb_write_io_threads = 4</span><br><span class="line">innodb_read_io_threads = 4</span><br><span class="line">innodb_thread_concurrency = 0</span><br><span class="line">innodb_purge_threads = 1</span><br><span class="line">innodb_flush_log_at_trx_commit = 2</span><br><span class="line">innodb_log_buffer_size = 2M</span><br><span class="line">innodb_log_file_size = 32M</span><br><span class="line">innodb_log_files_in_group = 3</span><br><span class="line">innodb_max_dirty_pages_pct = 90</span><br><span class="line">innodb_lock_wait_timeout = 120</span><br><span class="line">bulk_insert_buffer_size = 8M</span><br><span class="line">myisam_sort_buffer_size = 8M</span><br><span class="line">myisam_max_sort_file_size = 10G</span><br><span class="line">myisam_repair_threads = 1</span><br><span class="line">interactive_timeout = 28800</span><br><span class="line">wait_timeout = 28800</span><br><span class="line">[mysqldump]</span><br><span class="line">quick</span><br><span class="line">max_allowed_packet = 500M</span><br><span class="line">[myisamchk]</span><br><span class="line">key_buffer_size = 8M</span><br><span class="line">sort_buffer_size = 8M</span><br><span class="line">read_buffer = 4M</span><br><span class="line">write_buffer = 4M</span><br><span class="line">EOF</span><br><span class="line"># 数据库初始化</span><br><span class="line">/usr/local/mysql/bin/mysqld --initialize-insecure --user=mysql --basedir=/usr/local/mysql --datadir=/data/mysql</span><br><span class="line">chown mysql.mysql -R /data/mysql</span><br><span class="line">service mysqld start</span><br><span class="line"># 设置环境变量</span><br><span class="line">echo &quot;export PATH=/usr/local/mysql/bin:\$PATH&quot; &gt;&gt; /etc/profile</span><br><span class="line">[ -z &quot;$(grep ^&apos;export PATH=&apos; /etc/profile)&quot; ] &amp;&amp; echo &quot;export PATH=/usr/local/mysql/bin:\$PATH&quot; &gt;&gt; /etc/profile</span><br><span class="line">[ -n &quot;$(grep ^&apos;export PATH=&apos; /etc/profile)&quot; -a -z &quot;$(grep /usr/local/mysql /etc/profile)&quot; ] &amp;&amp; sed -i &quot;s@^export PATH=\(.*\)@export PATH=/usr/local/mysql/bin:\1@&quot; /etc/profile</span><br><span class="line"># 设置密码</span><br><span class="line">/usr/local/mysql/bin/mysql -e &quot;grant all privileges on *.* to root@&apos;127.0.0.1&apos; identified by &quot;123456&quot; with grant option;&quot;</span><br><span class="line">/usr/local/mysql/bin/mysql -e &quot;grant all privileges on *.* to root@&apos;localhost&apos; identified by &quot;123456&quot; with grant option;&quot;</span><br><span class="line"># 添加动态链接库</span><br><span class="line">echo &quot;/usr/local/mysql/lib&quot; &gt; /etc/ld.so.conf.d/mysql.conf</span><br><span class="line">ldconfig</span><br><span class="line">service mysqld restart</span><br></pre></td></tr></table></figure>
 <h3 id="MySQL源码目录"><a href="#MySQL源码目录" class="headerlink" title="MySQL源码目录"></a>MySQL源码目录</h3><pre>
 • BUILD 编译脚本
 • client 命令行工具代码(mysql,mysqladmin)
@@ -541,6 +534,105 @@ mysql> show status like 'innodb_row_lock%';
 • vio 底层网络I/O操作库
 • zlib库
 </pre>
+
+<h3 id="数据库配置优化"><a href="#数据库配置优化" class="headerlink" title="数据库配置优化"></a>数据库配置优化</h3><h4 id="基础配置"><a href="#基础配置" class="headerlink" title="基础配置"></a>基础配置</h4><h5 id="连接数配置"><a href="#连接数配置" class="headerlink" title="连接数配置"></a>连接数配置</h5><p>通过<code>show variables like &#39;%conn%&#39;;</code>查看配置</p>
+<ul>
+<li>max_connections 设置整个服务器最大session连接数</li>
+<li>max_user_connections   每个用户的session连接个数,值为0时表示每个用户的连接数不受限制</li>
+</ul>
+<h5 id="网络配置"><a href="#网络配置" class="headerlink" title="网络配置"></a>网络配置</h5><p>skip-name-resolve：禁止掉DNS的查询</p>
+<blockquote>
+<p>解释：<br>mysql会在用户登录过程中对客户端IP进行DNS反查，不管你是使用IP登录还是域名登录，这个反查的过程都是在的。所以如果你的mysql所在的服务器的DNS有问题或者质量不好，那么就有可能造成127.0.0.1登录很快，用域名或者IP登录数据库很慢的DNS解析问题。</p>
+<p>数据库加这个参数速度会变快skip-name-resolve，但是也有注意点，mysql.user 表里面的host不要用localhost之类的，要用127.0.0.1，不然连自己都连不上数据库，会报错。</p>
+</blockquote>
+<h4 id="缓存配置"><a href="#缓存配置" class="headerlink" title="缓存配置"></a>缓存配置</h4><h5 id="查询缓存"><a href="#查询缓存" class="headerlink" title="查询缓存"></a>查询缓存</h5><p>查询缓存的作用就是当查询接收到一个和之前同样的查询，服务器将会从查询缓存种检索结果，而不是再次分析和执行上次的查询。这样就大大提高了性能，节省时间。当查询很大、更新很少的情况下可以使用查询缓存。</p>
+<p>查看缓存设置<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">show variables like &apos;%query_cache%&apos;;</span><br></pre></td></tr></table></figure></p>
+<p>输出如下：</p>
+<pre>
++------------------------------+---------+
+| Variable_name                | Value   |
++------------------------------+---------+
+| have_query_cache             | YES     |
+| query_cache_limit            | 1048576 |
+| query_cache_min_res_unit     | 4096    |
+| query_cache_size             | 1048576 |
+| query_cache_type             | OFF     |
+| query_cache_wlock_invalidate | OFF     |
++------------------------------+---------+
+</pre>
+
+
+<p>查看缓存的状态<br>使用<code>show status like &#39;%Qcache%&#39;;</code></p>
+<p>输出结果：</p>
+<pre>
++-------------------------+---------+
+| Variable_name           | Value   |
++-------------------------+---------+
+| Qcache_free_blocks      | 1       |
+| Qcache_free_memory      | 1031832 |
+| Qcache_hits             | 0       |
+| Qcache_inserts          | 0       |
+| Qcache_lowmem_prunes    | 0       |
+| Qcache_not_cached       | 4       |
+| Qcache_queries_in_cache | 0       |
+| Qcache_total_blocks     | 1       |
++-------------------------+---------+
+</pre>
+
+
+<p>参考：<br><a href="https://blog.csdn.net/qq_27238185/article/details/54096069" target="_blank" rel="noopener">mysql查询缓存打开、设置、参数查询、性能变量意思</a></p>
+<h4 id="日志配置"><a href="#日志配置" class="headerlink" title="日志配置"></a>日志配置</h4><h5 id="通用查询日志"><a href="#通用查询日志" class="headerlink" title="通用查询日志"></a>通用查询日志</h5><p>通用查询日志：记录建立的客户端连接和执行的语句</p>
+<p>1). 查看通用查询日志配置<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">show variables like &apos;%general%&apos;;</span><br></pre></td></tr></table></figure></p>
+<p>输出结果：</p>
+<pre>
++------------------+------------------------------+
+| Variable_name    | Value                        |
++------------------+------------------------------+
+| general_log      | OFF                          |
+| general_log_file | /data/mysql/xxxxxx.log       |
++------------------+------------------------------+
+</pre>
+通用查询日志默认是关闭的。
+
+2). 查看当前日志输出的格式
+
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">MySQL [(none)]&gt; show variables like &apos;%log_output%&apos;;</span><br></pre></td></tr></table></figure>
+
+输出结果：
+<pre>
++---------------+-------+
+| Variable_name | Value |
++---------------+-------+
+| log_output    | FILE  |
++---------------+-------+
+1 row in set (0.01 sec)
+</pre>
+
+<p>日志格式可以是FILE（存储在数数据库的数据文件中的hostname.log），也可以是TABLE（存储在数据库中的mysql.general_log）</p>
+<p>3) 开启通用查询日志的方式</p>
+<ul>
+<li>通过set命令设置，只对当前mysql生效，重启失效</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">set global general_log=on;</span><br><span class="line">set global log_output=&apos;TABLE&apos;;   # 值为“FILE”、“TABLE“或者“FILE,TABLE”</span><br></pre></td></tr></table></figure>
+<ul>
+<li>通过配置文件my.cnf配置</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">general_log=1  # 为1表示开启通用日志查询，值为0表示关闭通用日志查询</span><br><span class="line">log_output=FILE,TABLE # 设置通用日志的输出格式为文件和表</span><br></pre></td></tr></table></figure>
+<h5 id="慢查询日志"><a href="#慢查询日志" class="headerlink" title="慢查询日志"></a>慢查询日志</h5><p>MySQL的慢查询日志是MySQL提供的一种日志记录，用来记录在MySQL中响应时间超过阈值的语句，具体指运行时间超过long_query_time值的SQL，则会被记录到慢查询日志中（日志可以写入文件或者数据库表，如果对性能要求高的话，建议写文件）。默认情况下，MySQL数据库是不开启慢查询日志的，long_query_time的默认值为10（即10秒，通常设置为1秒），即运行10秒以上的语句是慢查询语句。</p>
+<p>1) 查看是否开启慢查询日志</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">show variables like &apos;%quer%&apos;;</span><br></pre></td></tr></table></figure>
+<p>输出结果中</p>
+<ul>
+<li>slow_query_log值为ON时表示开启</li>
+<li>slow_query_log_file 的值是记录的慢查询日志到文件中（注意：默认名为主机名.log，慢查询日志是否写入指定文件中，需要指定慢查询的输出日志格式为文件，相关命令为：show variables like ‘%log_output%’；去查看输出的格式。当设置为TABLE时，慢查询日志输出至mysql.slow_log中）</li>
+</ul>
+<p>2) 在配置文件中配置慢查询</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">slow_query_log = 1</span><br><span class="line">long_query_time = 1</span><br><span class="line">slow_query_log_file = /data/mysql/mysql-slow.log</span><br></pre></td></tr></table></figure>
+<p>3) 如何制造慢查询，看慢查询设置是否有效</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&gt; select sleep(5)</span><br></pre></td></tr></table></figure>
+<h5 id="二进制配置"><a href="#二进制配置" class="headerlink" title="二进制配置"></a>二进制配置</h5><p>主要作数据库的恢复和同步使用</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">log_bin = mysql-bin</span><br><span class="line">binlog_format = mixed</span><br><span class="line">expire_logs_days = 7</span><br></pre></td></tr></table></figure>
+<h5 id="错误日志"><a href="#错误日志" class="headerlink" title="错误日志"></a>错误日志</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">log_error = /data/mysql/mysql-error.log</span><br></pre></td></tr></table></figure>
       
     </div>
 
@@ -598,7 +690,7 @@ mysql> show status like 'innodb_row_lock%';
     <strong>本文作者：</strong>yunshu</li>
   <li class="post-copyright-link">
     <strong>本文链接：</strong>
-    <a href="http://yunshu.me/2018/03/20/一些数据库知识点学习总结/" title="一些数据库知识点学习总结">http://yunshu.me/2018/03/20/一些数据库知识点学习总结/</a>
+    <a href="http://yunshu.me/2018/03/20/Mysql数据库学习总结/" title="一些数据库知识点学习总结">http://yunshu.me/2018/03/20/Mysql数据库学习总结/</a>
   </li>
   <li class="post-copyright-license">
     <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="external nofollow" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明出处！</li>
@@ -759,7 +851,7 @@ mysql> show status like 'innodb_row_lock%';
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">11</span>
+                    <span class="site-state-item-count">8</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
@@ -784,13 +876,7 @@ mysql> show status like 'innodb_row_lock%';
                     
                       
                     
-                      
-                    
-                      
-                    
-                      
-                    
-                    <span class="site-state-item-count">8</span>
+                    <span class="site-state-item-count">5</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
                 </div>
@@ -893,7 +979,7 @@ mysql> show status like 'innodb_row_lock%';
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#关系型数据库"><span class="nav-number">1.</span> <span class="nav-text">关系型数据库</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#关系型数据库的三范式"><span class="nav-number">1.1.</span> <span class="nav-text">关系型数据库的三范式</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#MySQL本质了解"><span class="nav-number">2.</span> <span class="nav-text">MySQL本质了解</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#mysql逻辑架构"><span class="nav-number">2.1.</span> <span class="nav-text">mysql逻辑架构</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#存储引擎的区别和选择"><span class="nav-number">2.1.1.</span> <span class="nav-text">存储引擎的区别和选择</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#MySQL-InnoDB的存储文件"><span class="nav-number">2.1.1.1.</span> <span class="nav-text">MySQL InnoDB的存储文件</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#MySQL核心模块"><span class="nav-number">2.1.2.</span> <span class="nav-text">MySQL核心模块</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#MySQL插件"><span class="nav-number">2.2.</span> <span class="nav-text">MySQL插件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#MySQL中的事务"><span class="nav-number">2.3.</span> <span class="nav-text">MySQL中的事务</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#MysSQL锁表类型"><span class="nav-number">2.4.</span> <span class="nav-text">MysSQL锁表类型</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#使用悲观锁和乐观锁解决并发"><span class="nav-number">2.5.</span> <span class="nav-text">使用悲观锁和乐观锁解决并发</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#悲观锁"><span class="nav-number">2.5.1.</span> <span class="nav-text">悲观锁</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#乐观锁"><span class="nav-number">2.5.2.</span> <span class="nav-text">乐观锁</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#海量数据的分页优化"><span class="nav-number">3.</span> <span class="nav-text">海量数据的分页优化</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#方案"><span class="nav-number">3.1.</span> <span class="nav-text">方案</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#MySQL的安装与配置"><span class="nav-number">4.</span> <span class="nav-text">MySQL的安装与配置</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#MySQL源码安装-下面在CentOS环境下安装、参考Oneinstack"><span class="nav-number">4.1.</span> <span class="nav-text">MySQL源码安装(下面在CentOS环境下安装、参考Oneinstack)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#一些配置"><span class="nav-number">4.2.</span> <span class="nav-text">一些配置</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#MySQL源码目录"><span class="nav-number">4.3.</span> <span class="nav-text">MySQL源码目录</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#关系型数据库"><span class="nav-number">1.</span> <span class="nav-text">关系型数据库</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#关系型数据库的三范式"><span class="nav-number">1.1.</span> <span class="nav-text">关系型数据库的三范式</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#MySQL本质了解"><span class="nav-number">2.</span> <span class="nav-text">MySQL本质了解</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#mysql逻辑架构"><span class="nav-number">2.1.</span> <span class="nav-text">mysql逻辑架构</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#MySQL核心模块"><span class="nav-number">2.1.1.</span> <span class="nav-text">MySQL核心模块</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#存储引擎的区别和选择"><span class="nav-number">2.1.2.</span> <span class="nav-text">存储引擎的区别和选择</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#MySQL-InnoDB的存储文件"><span class="nav-number">2.1.2.1.</span> <span class="nav-text">MySQL InnoDB的存储文件</span></a></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#MySQL插件"><span class="nav-number">2.2.</span> <span class="nav-text">MySQL插件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#MySQL中的事务"><span class="nav-number">2.3.</span> <span class="nav-text">MySQL中的事务</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#MysSQL锁表类型"><span class="nav-number">2.4.</span> <span class="nav-text">MysSQL锁表类型</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#使用悲观锁和乐观锁解决并发"><span class="nav-number">2.5.</span> <span class="nav-text">使用悲观锁和乐观锁解决并发</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#悲观锁"><span class="nav-number">2.5.1.</span> <span class="nav-text">悲观锁</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#乐观锁"><span class="nav-number">2.5.2.</span> <span class="nav-text">乐观锁</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#海量数据的分页优化"><span class="nav-number">3.</span> <span class="nav-text">海量数据的分页优化</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#方案"><span class="nav-number">3.1.</span> <span class="nav-text">方案</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#MySQL的安装与配置"><span class="nav-number">4.</span> <span class="nav-text">MySQL的安装与配置</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#MySQL源码安装"><span class="nav-number">4.1.</span> <span class="nav-text">MySQL源码安装</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#MySQL源码目录"><span class="nav-number">4.2.</span> <span class="nav-text">MySQL源码目录</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#数据库配置优化"><span class="nav-number">4.3.</span> <span class="nav-text">数据库配置优化</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#基础配置"><span class="nav-number">4.3.1.</span> <span class="nav-text">基础配置</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#连接数配置"><span class="nav-number">4.3.1.1.</span> <span class="nav-text">连接数配置</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#网络配置"><span class="nav-number">4.3.1.2.</span> <span class="nav-text">网络配置</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#缓存配置"><span class="nav-number">4.3.2.</span> <span class="nav-text">缓存配置</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#查询缓存"><span class="nav-number">4.3.2.1.</span> <span class="nav-text">查询缓存</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#日志配置"><span class="nav-number">4.3.3.</span> <span class="nav-text">日志配置</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#通用查询日志"><span class="nav-number">4.3.3.1.</span> <span class="nav-text">通用查询日志</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#慢查询日志"><span class="nav-number">4.3.3.2.</span> <span class="nav-text">慢查询日志</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#二进制配置"><span class="nav-number">4.3.3.3.</span> <span class="nav-text">二进制配置</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#错误日志"><span class="nav-number">4.3.3.4.</span> <span class="nav-text">错误日志</span></a></li></ol></li></ol></li></ol></li></ol></div>
             
 
           </div>
