@@ -1,6 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[前端优化]]></title>
+    <url>%2F2018%2F03%2F25%2F%E7%BD%91%E7%AB%99%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96%2F</url>
+    <content type="text"><![CDATA[前端优化包含： 减少http请求数 合并css/js/图片，图片做成矢量高清 充分利用浏览器缓存 使用CDN存储前端资源 多域名访问前端资源 使用单独的静态资源域名。 资源数据的压缩 压缩代码大小、图片大小，开启服务器gzip压缩 优化首屏展示速度 延迟加载、异步加载 php优化使用opcode优化php性能分析工具 xhui + tideways实践待完善… 具体参考：雅虎34条军规 [http://www.cnblogs.com/paul-3/p/5999722.html]]]></content>
+      <tags>
+        <tag>性能优化</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[实现一个简单的php服务治理框架]]></title>
     <url>%2F2018%2F03%2F24%2F%E5%AE%9E%E7%8E%B0%E4%B8%80%E4%B8%AA%E7%AE%80%E5%8D%95%E7%9A%84%E6%9C%8D%E5%8A%A1%E6%B2%BB%E7%90%86%E6%A1%86%E6%9E%B6%2F</url>
     <content type="text"><![CDATA[理解服务治理 &amp;&amp; RPC 服务治理深入浅出（1）- 服务治理出现的必要性探索 轻量级分布式 RPC 框架 服务治理框架的实现 服务治理深入浅出（2）- 远程方法调用的实现 服务治理深入浅出（3）- 远程方法跨语言通信 服务治理深入浅出（4）- 初级注册中心的构建 服务治理深入浅出（5）- 各服务自己的服务汇总输出]]></content>

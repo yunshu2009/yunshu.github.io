@@ -100,27 +100,28 @@
 
 
   
-  <meta name="keywords" content="技术博客,php,java,python,go" />
+  <meta name="keywords" content="性能优化," />
 
 
-<meta name="description" content="云舒的个人博客">
+<meta name="description" content="前端优化包含：  减少http请求数  合并css/js/图片，图片做成矢量高清  充分利用浏览器缓存   使用CDN存储前端资源   多域名访问前端资源  使用单独的静态资源域名。  资源数据的压缩  压缩代码大小、图片大小，开启服务器gzip压缩  优化首屏展示速度  延迟加载、异步加载 php优化使用opcode优化php性能分析工具 xhui + tideways实践待完善… 具体参考：雅">
+<meta name="keywords" content="性能优化">
 <meta property="og:type" content="article">
-<meta property="og:title" content="开发一个php扩展">
-<meta property="og:url" content="http://yunshu.me/2018/02/18/开发一个php扩展/index.html">
+<meta property="og:title" content="前端优化">
+<meta property="og:url" content="http://yunshu.me/2018/03/25/网站性能优化/index.html">
 <meta property="og:site_name" content="云舒的个人博客">
-<meta property="og:description" content="云舒的个人博客">
+<meta property="og:description" content="前端优化包含：  减少http请求数  合并css/js/图片，图片做成矢量高清  充分利用浏览器缓存   使用CDN存储前端资源   多域名访问前端资源  使用单独的静态资源域名。  资源数据的压缩  压缩代码大小、图片大小，开启服务器gzip压缩  优化首屏展示速度  延迟加载、异步加载 php优化使用opcode优化php性能分析工具 xhui + tideways实践待完善… 具体参考：雅">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2018-02-17T23:24:06.000Z">
+<meta property="og:updated_time" content="2018-03-25T14:07:17.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="开发一个php扩展">
-<meta name="twitter:description" content="云舒的个人博客">
+<meta name="twitter:title" content="前端优化">
+<meta name="twitter:description" content="前端优化包含：  减少http请求数  合并css/js/图片，图片做成矢量高清  充分利用浏览器缓存   使用CDN存储前端资源   多域名访问前端资源  使用单独的静态资源域名。  资源数据的压缩  压缩代码大小、图片大小，开启服务器gzip压缩  优化首屏展示速度  延迟加载、异步加载 php优化使用opcode优化php性能分析工具 xhui + tideways实践待完善… 具体参考：雅">
 
 
 
 
 
 
-  <link rel="canonical" href="http://yunshu.me/2018/02/18/开发一个php扩展/"/>
+  <link rel="canonical" href="http://yunshu.me/2018/03/25/网站性能优化/"/>
 
 
 
@@ -129,7 +130,7 @@
     sidebar: "",
   };
 </script>
-  <title>开发一个php扩展 | 云舒的个人博客</title>
+  <title>前端优化 | 云舒的个人博客</title>
   
 
 
@@ -292,7 +293,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yunshu.me/2018/02/18/开发一个php扩展/">
+    <link itemprop="mainEntityOfPage" href="http://yunshu.me/2018/03/25/网站性能优化/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="yunshu">
@@ -309,7 +310,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">开发一个php扩展</h1>
+          <h1 class="post-title" itemprop="name headline">前端优化</h1>
         
 
         <div class="post-meta">
@@ -321,7 +322,7 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-02-18T07:24:06+08:00">2018-02-18</time>
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-03-25T21:47:41+08:00">2018-03-25</time>
             
 
             
@@ -339,8 +340,8 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/2018/02/18/开发一个php扩展/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count gitment-comments-count" data-xid="/2018/02/18/开发一个php扩展/" itemprop="commentsCount"></span>
+                <a href="/2018/03/25/网站性能优化/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count gitment-comments-count" data-xid="/2018/03/25/网站性能优化/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -348,7 +349,7 @@
 
           
           
-             <span id="/2018/02/18/开发一个php扩展/" class="leancloud_visitors" data-flag-title="开发一个php扩展">
+             <span id="/2018/03/25/网站性能优化/" class="leancloud_visitors" data-flag-title="前端优化">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -380,7 +381,32 @@
       
 
       
-        
+        <h2 id="前端优化"><a href="#前端优化" class="headerlink" title="前端优化"></a>前端优化</h2><p>包含：</p>
+<ul>
+<li>减少http请求数</li>
+</ul>
+<p>合并css/js/图片，图片做成矢量高清</p>
+<ul>
+<li>充分利用浏览器缓存</li>
+</ul>
+<ul>
+<li>使用CDN存储前端资源</li>
+</ul>
+<ul>
+<li>多域名访问前端资源</li>
+</ul>
+<p>使用单独的静态资源域名。</p>
+<ul>
+<li>资源数据的压缩</li>
+</ul>
+<p>压缩代码大小、图片大小，开启服务器gzip压缩</p>
+<ul>
+<li>优化首屏展示速度</li>
+</ul>
+<p>延迟加载、异步加载</p>
+<h1 id="php优化"><a href="#php优化" class="headerlink" title="php优化"></a>php优化</h1><h1 id="使用opcode优化"><a href="#使用opcode优化" class="headerlink" title="使用opcode优化"></a>使用opcode优化</h1><h1 id="php性能分析工具-xhui-tideways实践"><a href="#php性能分析工具-xhui-tideways实践" class="headerlink" title="php性能分析工具 xhui + tideways实践"></a>php性能分析工具 xhui + tideways实践</h1><p>待完善…</p>
+<p>具体参考：雅虎34条军规 [<a href="http://www.cnblogs.com/paul-3/p/5999722.html" target="_blank" rel="noopener">http://www.cnblogs.com/paul-3/p/5999722.html</a>]</p>
+
       
     </div>
 
@@ -438,7 +464,7 @@
     <strong>本文作者：</strong>yunshu</li>
   <li class="post-copyright-link">
     <strong>本文链接：</strong>
-    <a href="http://yunshu.me/2018/02/18/开发一个php扩展/" title="开发一个php扩展">http://yunshu.me/2018/02/18/开发一个php扩展/</a>
+    <a href="http://yunshu.me/2018/03/25/网站性能优化/" title="前端优化">http://yunshu.me/2018/03/25/网站性能优化/</a>
   </li>
   <li class="post-copyright-license">
     <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="external nofollow" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明出处！</li>
@@ -449,6 +475,12 @@
 
     <footer class="post-footer">
       
+        <div class="post-tags">
+          
+            <a href="/tags/性能优化/" rel="tag"># 性能优化</a>
+          
+        </div>
+      
 
       
       
@@ -458,15 +490,15 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
+              <a href="/2018/03/24/实现一个简单的服务治理框架/" rel="next" title="实现一个简单的php服务治理框架">
+                <i class="fa fa-chevron-left"></i> 实现一个简单的php服务治理框架
+              </a>
+            
           </div>
 
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2018/02/19/使用SSR科学上网/" rel="prev" title="使用SSR科学上网">
-                使用SSR科学上网 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -560,8 +592,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -720,6 +761,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#前端优化"><span class="nav-number">1.</span> <span class="nav-text">前端优化</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#php优化"><span class="nav-number"></span> <span class="nav-text">php优化</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#使用opcode优化"><span class="nav-number"></span> <span class="nav-text">使用opcode优化</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#php性能分析工具-xhui-tideways实践"><span class="nav-number"></span> <span class="nav-text">php性能分析工具 xhui + tideways实践</span></a></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
