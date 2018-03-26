@@ -103,18 +103,20 @@
   <meta name="keywords" content="性能优化," />
 
 
-<meta name="description" content="前端优化 减少http请求数  合并css/js/图片，图片做成矢量高清     充分利用浏览器缓存   使用CDN存储前端资源   多域名访问前端资源  使用单独的静态资源域名。     资源数据的压缩  压缩代码大小、图片大小，开启服务器gzip压缩     优化首屏展示速度  延迟加载、异步加载     具体参考：雅虎34条军规 php优化使用opcode优化php性能分析工具 xhui +">
+<meta name="description" content="前端优化 减少http请求数  合并css/js/图片，图片做成矢量高清 将多张图片合成至一张图片，使用背景图片偏移技术进行图片定位。     充分利用浏览器缓存   使用CDN存储前端资源   多域名访问前端资源  使用单独的静态资源域名。     资源数据的压缩  压缩代码大小、图片大小，开启服务器gzip压缩     优化首屏展示速度  延迟加载、异步加载     具体参考：雅虎34条军规">
 <meta name="keywords" content="性能优化">
 <meta property="og:type" content="article">
 <meta property="og:title" content="网站性能优化">
 <meta property="og:url" content="http://yunshu.me/2018/03/25/网站性能优化/index.html">
 <meta property="og:site_name" content="云舒的个人博客">
-<meta property="og:description" content="前端优化 减少http请求数  合并css/js/图片，图片做成矢量高清     充分利用浏览器缓存   使用CDN存储前端资源   多域名访问前端资源  使用单独的静态资源域名。     资源数据的压缩  压缩代码大小、图片大小，开启服务器gzip压缩     优化首屏展示速度  延迟加载、异步加载     具体参考：雅虎34条军规 php优化使用opcode优化php性能分析工具 xhui +">
+<meta property="og:description" content="前端优化 减少http请求数  合并css/js/图片，图片做成矢量高清 将多张图片合成至一张图片，使用背景图片偏移技术进行图片定位。     充分利用浏览器缓存   使用CDN存储前端资源   多域名访问前端资源  使用单独的静态资源域名。     资源数据的压缩  压缩代码大小、图片大小，开启服务器gzip压缩     优化首屏展示速度  延迟加载、异步加载     具体参考：雅虎34条军规">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2018-03-25T14:12:09.000Z">
+<meta property="og:image" content="http://static.yunshudm.com/2017/3/wKiom1LUF8DS1inQAAE8bwOlNT22220.png">
+<meta property="og:updated_time" content="2018-03-26T12:53:49.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="网站性能优化">
-<meta name="twitter:description" content="前端优化 减少http请求数  合并css/js/图片，图片做成矢量高清     充分利用浏览器缓存   使用CDN存储前端资源   多域名访问前端资源  使用单独的静态资源域名。     资源数据的压缩  压缩代码大小、图片大小，开启服务器gzip压缩     优化首屏展示速度  延迟加载、异步加载     具体参考：雅虎34条军规 php优化使用opcode优化php性能分析工具 xhui +">
+<meta name="twitter:description" content="前端优化 减少http请求数  合并css/js/图片，图片做成矢量高清 将多张图片合成至一张图片，使用背景图片偏移技术进行图片定位。     充分利用浏览器缓存   使用CDN存储前端资源   多域名访问前端资源  使用单独的静态资源域名。     资源数据的压缩  压缩代码大小、图片大小，开启服务器gzip压缩     优化首屏展示速度  延迟加载、异步加载     具体参考：雅虎34条军规">
+<meta name="twitter:image" content="http://static.yunshudm.com/2017/3/wKiom1LUF8DS1inQAAE8bwOlNT22220.png">
 
 
 
@@ -385,6 +387,7 @@
 <li><p>减少http请求数</p>
 <blockquote>
 <p>合并css/js/图片，图片做成矢量高清</p>
+<p>将多张图片合成至一张图片，使用背景图片偏移技术进行图片定位。</p>
 </blockquote>
 </li>
 </ul>
@@ -416,7 +419,38 @@
 </li>
 </ul>
 <p> 具体参考：<a href="http://www.cnblogs.com/paul-3/p/5999722.html" target="_blank" rel="noopener">雅虎34条军规</a></p>
-<h2 id="php优化"><a href="#php优化" class="headerlink" title="php优化"></a>php优化</h2><h3 id="使用opcode优化"><a href="#使用opcode优化" class="headerlink" title="使用opcode优化"></a>使用opcode优化</h3><h3 id="php性能分析工具-xhui-tideways实践"><a href="#php性能分析工具-xhui-tideways实践" class="headerlink" title="php性能分析工具 xhui + tideways实践"></a>php性能分析工具 xhui + tideways实践</h3><p>待完善…</p>
+<h2 id="php优化"><a href="#php优化" class="headerlink" title="php优化"></a>php优化</h2><h3 id="使用opcode优化"><a href="#使用opcode优化" class="headerlink" title="使用opcode优化"></a>使用opcode优化</h3><h3 id="php性能分析-xhui-tideways实践"><a href="#php性能分析-xhui-tideways实践" class="headerlink" title="php性能分析 xhui + tideways实践"></a>php性能分析 xhui + tideways实践</h3><blockquote>
+<p>tiways是一个测试php性能的php扩展，php版本要求是大于等于7.0。如果php版本小于7.0，可以使用xhprof扩展。<br>xhgui用来展示测试数据，xhgui将数据保存到MongoDB。</p>
+</blockquote>
+<h4 id="安装tideways"><a href="#安装tideways" class="headerlink" title="安装tideways"></a>安装tideways</h4><p>在ubuntu环境下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">echo &apos;deb http://s3-eu-west-1.amazonaws.com/qafoo-profiler/packages debian main&apos; &gt; /etc/apt/sources.list.d/tideways.list</span><br><span class="line">wget -qO - https://s3-eu-west-1.amazonaws.com/qafoo-profiler/packages/EEB5E8F4.gpg | sudo apt-key add -</span><br><span class="line">sudo apt-get update</span><br><span class="line">sudo apt-get install tideways-php tideways-daemon</span><br></pre></td></tr></table></figure>
+<p>重启php-fpm，查看是否安装成功：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo service php7.1-fpm restart</span><br></pre></td></tr></table></figure>
+<h4 id="安装MongoDB"><a href="#安装MongoDB" class="headerlink" title="安装MongoDB"></a>安装MongoDB</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get install mongodb</span><br><span class="line">sudo apt-get install  php-mongodb</span><br><span class="line">sudo /etc/init.d/mongodb start</span><br></pre></td></tr></table></figure>
+<h4 id="安装xhgui"><a href="#安装xhgui" class="headerlink" title="安装xhgui"></a>安装xhgui</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">git clone https://github.com/laynefyc/xhgui-branch.git</span><br><span class="line">cd xhgui-branch</span><br><span class="line">composer install</span><br></pre></td></tr></table></figure>
+<h4 id="配置xhgui"><a href="#配置xhgui" class="headerlink" title="配置xhgui"></a>配置xhgui</h4><p>添加config/config.php,添加支持扩展为<code>tideways</code></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">return [</span><br><span class="line">    &apos;extension&apos; =&gt; &apos;tideways&apos;,</span><br><span class="line">];</span><br></pre></td></tr></table></figure>
+<h4 id="MongoDB加索引"><a href="#MongoDB加索引" class="headerlink" title="MongoDB加索引"></a>MongoDB加索引</h4><p>$ mongo</p>
+<blockquote>
+<p>use xhprof<br>db.results.ensureIndex( { ‘meta.SERVER.REQUEST_TIME’ : -1 } )<br>db.results.ensureIndex( { ‘profile.main().wt’ : -1 } )<br>db.results.ensureIndex( { ‘profile.main().mu’ : -1 } )<br>db.results.ensureIndex( { ‘profile.main().cpu’ : -1 } )<br>db.results.ensureIndex( { ‘meta.url’ : 1 } )</p>
+</blockquote>
+<h4 id="配置nginx"><a href="#配置nginx" class="headerlink" title="配置nginx"></a>配置nginx</h4><ol>
+<li><p>要监控的应用app</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">   location ~ \.php$ &#123;</span><br><span class="line">      fastcgi_split_path_info ^(.+\.php)(/.+)$;</span><br><span class="line">      fastcgi_pass unix:/var/run/php/php7.1-fpm.sock;</span><br><span class="line">      fastcgi_index index.php;</span><br><span class="line">      include fastcgi_params;</span><br><span class="line">      fastcgi_param SCRIPT_FILENAME $document_root$fastcgi_script_name;</span><br><span class="line">	</span><br><span class="line"># 加上下面的这两句</span><br><span class="line">      fastcgi_param TIDEWAYS_SAMPLERATE &quot;25&quot;;</span><br><span class="line">      fastcgi_param PHP_VALUE &quot;auto_prepend_file=/home/vagrant/Code/xhgui/external/header.php&quot;;</span><br><span class="line"></span><br><span class="line">      fastcgi_intercept_errors off;</span><br><span class="line">      fastcgi_buffer_size 16k;</span><br><span class="line">      fastcgi_buffers 4 16k;</span><br><span class="line">      fastcgi_connect_timeout 300;</span><br><span class="line">      fastcgi_send_timeout 300;</span><br><span class="line">      fastcgi_read_timeout 300;</span><br><span class="line">  &#125;</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<ol>
+<li>展示app</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"># .表示省略了一些nginx配置</span><br><span class="line">server &#123;</span><br><span class="line">    listen 80;</span><br><span class="line">    listen 443 ssl http2;</span><br><span class="line">    server_name xhgui.app;</span><br><span class="line">    root &quot;/home/vagrant/Code/xhgui/webroot&quot;;</span><br><span class="line">    .</span><br><span class="line">    .</span><br><span class="line">    .</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="效果"><a href="#效果" class="headerlink" title="效果"></a>效果</h3><p><img src="http://static.yunshudm.com/2017/3/wKiom1LUF8DS1inQAAE8bwOlNT22220.png" alt="xhgui"></p>
+<p>相关链接 ：</p>
+<ul>
+<li><a href="https://github.com/tideways/php-xhprof-extension" target="_blank" rel="noopener">https://github.com/tideways/php-xhprof-extension</a></li>
+<li><a href="https://tideways.io/profiler/docs/setup/installation" target="_blank" rel="noopener">https://tideways.io/profiler/docs/setup/installation</a></li>
+<li><a href="https://github.com/laynefyc/xhgui-branch.git" target="_blank" rel="noopener">https://github.com/laynefyc/xhgui-branch.git</a></li>
+</ul>
+<p>待完善…</p>
 
       
     </div>
@@ -760,6 +794,10 @@
                     <a href="http://qianlei.cc/" title="qianlei" target="_blank">qianlei</a>
                   </li>
                 
+                  <li class="links-of-blogroll-item">
+                    <a href="https://yangweijie.github.io/note/" title="jay" target="_blank">jay</a>
+                  </li>
+                
               </ul>
             </div>
           
@@ -782,7 +820,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#前端优化"><span class="nav-number">1.</span> <span class="nav-text">前端优化</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#php优化"><span class="nav-number">2.</span> <span class="nav-text">php优化</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#使用opcode优化"><span class="nav-number">2.1.</span> <span class="nav-text">使用opcode优化</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#php性能分析工具-xhui-tideways实践"><span class="nav-number">2.2.</span> <span class="nav-text">php性能分析工具 xhui + tideways实践</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#前端优化"><span class="nav-number">1.</span> <span class="nav-text">前端优化</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#php优化"><span class="nav-number">2.</span> <span class="nav-text">php优化</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#使用opcode优化"><span class="nav-number">2.1.</span> <span class="nav-text">使用opcode优化</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#php性能分析-xhui-tideways实践"><span class="nav-number">2.2.</span> <span class="nav-text">php性能分析 xhui + tideways实践</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#安装tideways"><span class="nav-number">2.2.1.</span> <span class="nav-text">安装tideways</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#安装MongoDB"><span class="nav-number">2.2.2.</span> <span class="nav-text">安装MongoDB</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#安装xhgui"><span class="nav-number">2.2.3.</span> <span class="nav-text">安装xhgui</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#配置xhgui"><span class="nav-number">2.2.4.</span> <span class="nav-text">配置xhgui</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#MongoDB加索引"><span class="nav-number">2.2.5.</span> <span class="nav-text">MongoDB加索引</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#配置nginx"><span class="nav-number">2.2.6.</span> <span class="nav-text">配置nginx</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#效果"><span class="nav-number">2.3.</span> <span class="nav-text">效果</span></a></li></ol></li></ol></div>
             
 
           </div>
