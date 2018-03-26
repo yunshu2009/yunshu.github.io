@@ -111,12 +111,13 @@
 <meta property="og:site_name" content="云舒的个人博客">
 <meta property="og:description" content="前端优化 减少http请求数  合并css/js/图片，图片做成矢量高清 将多张图片合成至一张图片，使用背景图片偏移技术进行图片定位。     充分利用浏览器缓存   使用CDN存储前端资源   多域名访问前端资源  使用单独的静态资源域名。">
 <meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="http://static.yunshudm.com/2017/3/261652573847931.png">
 <meta property="og:image" content="http://static.yunshudm.com/2017/3/wKiom1LUF8DS1inQAAE8bwOlNT22220.png">
-<meta property="og:updated_time" content="2018-03-26T13:47:33.000Z">
+<meta property="og:updated_time" content="2018-03-26T15:41:52.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="网站性能优化">
 <meta name="twitter:description" content="前端优化 减少http请求数  合并css/js/图片，图片做成矢量高清 将多张图片合成至一张图片，使用背景图片偏移技术进行图片定位。     充分利用浏览器缓存   使用CDN存储前端资源   多域名访问前端资源  使用单独的静态资源域名。">
-<meta name="twitter:image" content="http://static.yunshudm.com/2017/3/wKiom1LUF8DS1inQAAE8bwOlNT22220.png">
+<meta name="twitter:image" content="http://static.yunshudm.com/2017/3/261652573847931.png">
 
 
 
@@ -420,7 +421,17 @@
 </li>
 </ul>
 <p> 具体参考：<a href="http://www.cnblogs.com/paul-3/p/5999722.html" target="_blank" rel="noopener">雅虎34条军规</a></p>
-<h2 id="php优化"><a href="#php优化" class="headerlink" title="php优化"></a>php优化</h2><h3 id="使用opcode优化"><a href="#使用opcode优化" class="headerlink" title="使用opcode优化"></a>使用opcode优化</h3><h3 id="php性能分析-xhui-tideways实践"><a href="#php性能分析-xhui-tideways实践" class="headerlink" title="php性能分析 xhui + tideways实践"></a>php性能分析 xhui + tideways实践</h3><blockquote>
+<h2 id="php优化"><a href="#php优化" class="headerlink" title="php优化"></a>php优化</h2><h3 id="使用opcode缓存"><a href="#使用opcode缓存" class="headerlink" title="使用opcode缓存"></a>使用opcode缓存</h3><h4 id="opcode缓存简介"><a href="#opcode缓存简介" class="headerlink" title="opcode缓存简介"></a>opcode缓存简介</h4><blockquote>
+<p>当解释器完成对脚本代码的分析后，便将它们生成可以直接运行的中间代码，也称为操作码（Operate Code，opcode）。Opcode cache的目地是避免重复编译，减少CPU和内存开销。如果动态内容的性能瓶颈不在于CPU和内存，而在于I/O操作，比如数据库查询带来的磁盘I/O开销，那么opcode cache的性能提升是非常有限的。</p>
+</blockquote>
+<h4 id="使用opcode缓存-1"><a href="#使用opcode缓存-1" class="headerlink" title="使用opcode缓存"></a>使用opcode缓存</h4><p><img src="http://static.yunshudm.com/2017/3/261652573847931.png" alt="opcode-cache"></p>
+<p>从图中可以看出，使用了opcode缓存后，php代码的生命周期少了词典扫描和表达式（将PHP代码转换为语言片段[Tokens]）、解析文件（将Tokens转换成简单而有意义的表达式）、创建要执行的计算机代码（称为Opcode）几步。</p>
+<h4 id="opecode缓存-Zend-OPcache安装使用"><a href="#opecode缓存-Zend-OPcache安装使用" class="headerlink" title="opecode缓存-Zend OPcache安装使用"></a>opecode缓存-Zend OPcache安装使用</h4><p>PHP&gt;=5.5.0，php内置了OPcache,PHP小于5.5.0的话，要通过PCEL安装。</p>
+<p><strong>OPcache配置</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"># 检查脚本时间戳是否有更新的周期，以秒为单位。 设置为 0 会导致针对每个请求， OPcache 都会检查脚本更新。</span><br><span class="line">opcache.revalidate_freq=60</span><br><span class="line"># 如果启用，那么 OPcache 会每隔 opcache.revalidate_freq 设定的秒数 检查脚本是否更新。 如果禁用此选项，你必须使用 opcache_reset() 或者 opcache_invalidate() 函数来手动重置 OPcache，也可以 通过重启 Web 服务器来使文件系统更改生效</span><br><span class="line">opcache.validate_timestamps=1 </span><br><span class="line"># OPcache 哈希表中可存储的脚本文件数量上限。 真实的取值是在质数集合 &#123; 223, 463, 983, 1979, 3907, 7963, 16229, 32531, 65407, 130987 &#125; 中找到的第一个大于等于设置值的质数。 设置值取值范围最小值是 200，最大值在 PHP 5.5.6 之前是 100000，PHP 5.5.6 及之后是 1000000</span><br><span class="line">opcache.max_accelerated_files=1000</span><br><span class="line"># OPcache 的共享内存大小，以兆字节为单位。</span><br><span class="line">opcache.memory_consumption=512</span><br><span class="line"># 用来存储预留字符串的内存大小，以兆字节为单位。 PHP 5.3.0 之前的版本会忽略此配置指令。</span><br><span class="line">opcache.interned_strings_buffer=16</span><br><span class="line"># 如果启用，则会使用快速停止续发事件。 所谓快速停止续发事件是指依赖 Zend 引擎的内存管理模块 一次释放全部请求变量的内存，而不是依次释放每一个已分配的内存块。</span><br><span class="line">opcache.fast_shutdown=1</span><br><span class="line"># 启用并设置二级缓存目录。 当服务器重新启动或SHM重置时，SHM内存已满，应该可以提高性能。 默认的“”禁用基于文件的缓存。</span><br></pre></td></tr></table></figure>
+<h3 id="PHP-7"><a href="#PHP-7" class="headerlink" title="PHP 7"></a>PHP 7</h3><p>…</p>
+<h3 id="SWOOLE"><a href="#SWOOLE" class="headerlink" title="SWOOLE"></a>SWOOLE</h3><p>…</p>
+<h3 id="php性能分析-xhui-tideways实践"><a href="#php性能分析-xhui-tideways实践" class="headerlink" title="php性能分析 xhui + tideways实践"></a>php性能分析 xhui + tideways实践</h3><blockquote>
 <p>tiways是一个测试php性能的php扩展，php版本要求是大于等于7.0。如果php版本小于7.0，可以使用xhprof扩展。<br>xhgui用来展示测试数据，xhgui将数据保存到MongoDB。</p>
 </blockquote>
 <h4 id="安装tideways"><a href="#安装tideways" class="headerlink" title="安装tideways"></a>安装tideways</h4><p>在ubuntu环境下：</p>
@@ -443,6 +454,7 @@
 <li><a href="https://tideways.io/profiler/docs/setup/installation" target="_blank" rel="noopener">https://tideways.io/profiler/docs/setup/installation</a></li>
 <li><a href="https://github.com/laynefyc/xhgui-branch.git" target="_blank" rel="noopener">https://github.com/laynefyc/xhgui-branch.git</a></li>
 </ul>
+<h2 id="Nginx优化"><a href="#Nginx优化" class="headerlink" title="Nginx优化"></a>Nginx优化</h2><p>…</p>
 <p>待完善…</p>
 
       
@@ -813,7 +825,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#前端优化"><span class="nav-number">1.</span> <span class="nav-text">前端优化</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#php优化"><span class="nav-number">2.</span> <span class="nav-text">php优化</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#使用opcode优化"><span class="nav-number">2.1.</span> <span class="nav-text">使用opcode优化</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#php性能分析-xhui-tideways实践"><span class="nav-number">2.2.</span> <span class="nav-text">php性能分析 xhui + tideways实践</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#安装tideways"><span class="nav-number">2.2.1.</span> <span class="nav-text">安装tideways</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#安装MongoDB"><span class="nav-number">2.2.2.</span> <span class="nav-text">安装MongoDB</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#安装xhgui"><span class="nav-number">2.2.3.</span> <span class="nav-text">安装xhgui</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#配置xhgui"><span class="nav-number">2.2.4.</span> <span class="nav-text">配置xhgui</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#MongoDB加索引"><span class="nav-number">2.2.5.</span> <span class="nav-text">MongoDB加索引</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#配置nginx"><span class="nav-number">2.2.6.</span> <span class="nav-text">配置nginx</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#性能分析平台搭建效果"><span class="nav-number">2.2.7.</span> <span class="nav-text">性能分析平台搭建效果</span></a></li></ol></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#前端优化"><span class="nav-number">1.</span> <span class="nav-text">前端优化</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#php优化"><span class="nav-number">2.</span> <span class="nav-text">php优化</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#使用opcode缓存"><span class="nav-number">2.1.</span> <span class="nav-text">使用opcode缓存</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#opcode缓存简介"><span class="nav-number">2.1.1.</span> <span class="nav-text">opcode缓存简介</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#使用opcode缓存-1"><span class="nav-number">2.1.2.</span> <span class="nav-text">使用opcode缓存</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#opecode缓存-Zend-OPcache安装使用"><span class="nav-number">2.1.3.</span> <span class="nav-text">opecode缓存-Zend OPcache安装使用</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#PHP-7"><span class="nav-number">2.2.</span> <span class="nav-text">PHP 7</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#SWOOLE"><span class="nav-number">2.3.</span> <span class="nav-text">SWOOLE</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#php性能分析-xhui-tideways实践"><span class="nav-number">2.4.</span> <span class="nav-text">php性能分析 xhui + tideways实践</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#安装tideways"><span class="nav-number">2.4.1.</span> <span class="nav-text">安装tideways</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#安装MongoDB"><span class="nav-number">2.4.2.</span> <span class="nav-text">安装MongoDB</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#安装xhgui"><span class="nav-number">2.4.3.</span> <span class="nav-text">安装xhgui</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#配置xhgui"><span class="nav-number">2.4.4.</span> <span class="nav-text">配置xhgui</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#MongoDB加索引"><span class="nav-number">2.4.5.</span> <span class="nav-text">MongoDB加索引</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#配置nginx"><span class="nav-number">2.4.6.</span> <span class="nav-text">配置nginx</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#性能分析平台搭建效果"><span class="nav-number">2.4.7.</span> <span class="nav-text">性能分析平台搭建效果</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Nginx优化"><span class="nav-number">3.</span> <span class="nav-text">Nginx优化</span></a></li></ol></div>
             
 
           </div>
