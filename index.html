@@ -292,6 +292,144 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yunshu.me/2018/04/09/使用淘宝客API做了个动漫商城/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="yunshu">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpeg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="云舒的个人博客">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/04/09/使用淘宝客API做了个动漫商城/" itemprop="url">使用淘宝客API做了个动漫商城</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-04-09T18:07:49+08:00">2018-04-09</time>
+            
+
+            
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+             <span id="/2018/04/09/使用淘宝客API做了个动漫商城/" class="leancloud_visitors" data-flag-title="使用淘宝客API做了个动漫商城">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数&#58;</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>使用淘宝客API做了个动漫商城，见下图</p>
+
+          
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+<div>
+  
+</div>
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yunshu.me/2018/04/07/thinkphp5-source-reading/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -954,11 +1092,22 @@
 
       
         
-          <h2 id="前端优化"><a href="#前端优化" class="headerlink" title="前端优化"></a>前端优化</h2><h3 id="减少http请求数"><a href="#减少http请求数" class="headerlink" title="减少http请求数"></a>减少http请求数</h3><blockquote>
-<p>合并css/js/图片，图片做成矢量高清</p>
-<p>将多张图片合成至一张图片，使用背景图片偏移技术进行图片定位。</p>
-</blockquote>
-<h3 id="充分利用浏览器缓存"><a href="#充分利用浏览器缓存" class="headerlink" title="充分利用浏览器缓存"></a>充分利用浏览器缓存</h3><h3 id="使用CDN存储前端资源"><a href="#使用CDN存储前端资源" class="headerlink" title="使用CDN存储前端资源"></a>使用CDN存储前端资源</h3><h3 id="多域名访问前端资源"><a href="#多域名访问前端资源" class="headerlink" title="多域名访问前端资源"></a>多域名访问前端资源</h3><h3 id="使用单独的静态资源域名。"><a href="#使用单独的静态资源域名。" class="headerlink" title="使用单独的静态资源域名。"></a>使用单独的静态资源域名。</h3>
+          <h2 id="前端优化"><a href="#前端优化" class="headerlink" title="前端优化"></a>前端优化</h2><h3 id="减少http请求数"><a href="#减少http请求数" class="headerlink" title="减少http请求数"></a>减少http请求数</h3><ul>
+<li><p>图片地图。客户单图片地图可以使用<a href="http://www.w3school.com.cn/tags/tag_map.asp" target="_blank" rel="noopener">map</a>标签来实现。如果正在导航或者其他超链接中使用多个图片，将他们转换为图片地图是加速页面的最简单的方式。</p>
+<ul>
+<li><p>CSS Sprites。将多幅图片合并成单独的图片。使用CSS的<a href="http://www.w3school.com.cn/cssref/pr_background-position.asp" target="_blank" rel="noopener">background-position</a>属性，可以将HTML元素放置到背景图片期望的位置上。</p>
+</li>
+<li><p>内联图片。使用data:URL模式可以在Web页面中包含图片但无需额外的HTTP请求。</p>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li>合并脚本和样式表。理想情况下，一个页面应该使用不多于一个脚本和样式表。</li>
+</ul>
+<h3 id="使用CDN存储前端资源"><a href="#使用CDN存储前端资源" class="headerlink" title="使用CDN存储前端资源"></a>使用CDN存储前端资源</h3><p>CDN用于发布静态内容，如图片、脚本、样式和Flash。</p>
+<p>可使用<a href="http://17ce.com这个网站网站使用CDN后在各地的响应速度。" target="_blank" rel="noopener">http://17ce.com这个网站网站使用CDN后在各地的响应速度。</a></p>
+<h3 id="添加Expires头"><a href="#添加Expires头" class="headerlink" title="添加Expires头"></a>添加Expires头</h3><h3 id="充分利用浏览器缓存"><a href="#充分利用浏览器缓存" class="headerlink" title="充分利用浏览器缓存"></a>充分利用浏览器缓存</h3><h3 id="多域名访问前端资源"><a href="#多域名访问前端资源" class="headerlink" title="多域名访问前端资源"></a>多域名访问前端资源</h3><h3 id="使用单独的静态资源域名。"><a href="#使用单独的静态资源域名。" class="headerlink" title="使用单独的静态资源域名。"></a>使用单独的静态资源域名。</h3>
           <!--noindex-->
           <div class="post-button text-center">
             <a class="btn" href="/2018/03/25/网站性能优化/#more" rel="contents">
@@ -1566,151 +1715,6 @@
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yunshu.me/2018/03/20/Mysql数据库学习总结/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="yunshu">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.jpeg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="云舒的个人博客">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/03/20/Mysql数据库学习总结/" itemprop="url">Mysql数据库学习总结</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-03-20T19:47:21+08:00">2018-03-20</time>
-            
-
-            
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-             <span id="/2018/03/20/Mysql数据库学习总结/" class="leancloud_visitors" data-flag-title="Mysql数据库学习总结">
-               <span class="post-meta-divider">|</span>
-               <span class="post-meta-item-icon">
-                 <i class="fa fa-eye"></i>
-               </span>
-               
-                 <span class="post-meta-item-text">阅读次数&#58;</span>
-               
-                 <span class="leancloud-visitors-count"></span>
-             </span>
-          
-
-          
-
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <h2 id="关系型数据库"><a href="#关系型数据库" class="headerlink" title="关系型数据库"></a>关系型数据库</h2><h3 id="关系型数据库的三范式"><a href="#关系型数据库的三范式" class="headerlink" title="关系型数据库的三范式"></a>关系型数据库的三范式</h3><p>第一范式（1NF）: 每一列都是不可分割的原子数据项(基本类型列) </p>
-<p>第二范式（2NF）： 要求实体的属性完全依赖于主关键字(无重复行) </p>
-<p>第三范式（3NF）: 数据表不包含其它表已有的非主属性(无数据冗余)</p>
-<p>关于数据库的规范设计，都会谈到是否符合三范式。但是考虑到数据库的性能优化，也不必都按照三范式来设计，可以做数据的适当冗余。如为了查询效率，在商品表，可以设置个img_url字段放图片的主图。</p>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2018/03/20/Mysql数据库学习总结/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-
-    
-    
-    
-<div>
-  
-</div>
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
@@ -1762,7 +1766,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">16</span>
+                    <span class="site-state-item-count">17</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
