@@ -5,10 +5,10 @@
     
   <url>
     <loc>http://yunshu.me/2018/04/07/thinkphp5-source-reading/</loc>
-    <lastmod>2018-05-24T14:48:05.000Z</lastmod>
+    <lastmod>2018-05-24T14:50:58.000Z</lastmod>
     <data>
         <display>
-        <title>thinkphp5源码阅读系列一之分析“$this->redirect()”到底做了啥</title>
+        <title>thinkphp5 “$this->redirect()” 到底经历了啥</title>
         <pubTime>2018-04-07T15:04:01.000Z</pubTime>
         
         <tag>php,thankphp</tag>
