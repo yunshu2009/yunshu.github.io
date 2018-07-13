@@ -110,7 +110,7 @@
 <meta property="og:site_name" content="云舒的个人博客">
 <meta property="og:description" content="1.’\\$a’,”\\$a”的结果是？ 答：\$a,\$a;  2.echo intval(0.58*100)的结果是？ 答：57。如果echo intval((string)(0.58*100))结果将是58。 3.怎么防止sql注入？ 答： 1、过滤掉一些常见的数据库操作关键字：select,insert,update,delete,and,*等 或者通过系统函数：addslashes(需">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2018-07-13T15:43:56.000Z">
+<meta property="og:updated_time" content="2018-07-13T15:47:48.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="一些面试题">
 <meta name="twitter:description" content="1.’\\$a’,”\\$a”的结果是？ 答：\$a,\$a;  2.echo intval(0.58*100)的结果是？ 答：57。如果echo intval((string)(0.58*100))结果将是58。 3.怎么防止sql注入？ 答： 1、过滤掉一些常见的数据库操作关键字：select,insert,update,delete,and,*等 或者通过系统函数：addslashes(需">
@@ -388,6 +388,7 @@
 <p>答：</p>
 <p>1、过滤掉一些常见的数据库操作关键字：select,insert,update,delete,and,*等</p>
 <p>或者通过系统函数：addslashes(需要被过滤的内容)来进行过滤。</p>
+<a id="more"></a>
 <p> 2、在PHP配置文件中</p>
 <p>Register_globals=off;设置为关闭状态 //作用将注册全局变量关闭。</p>
 <p>比如：接收POST表单的值使用$_POST[‘user’],如果将register_globals=on;直接使用$user可以接收表单的值。</p>
@@ -411,6 +412,9 @@
 <p><strong>5.Redis有哪些数据结构以及使用场景？</strong></p>
 <p>字符串String、字典Hash、列表List、集合Set、有序集合SortedSet、HyperLogLog、Geo、Pub/Sub</p>
 <p>String：统计计数、Hash：适合用于存储对象、列表：用作队列、集合：某用户的粉丝列表、有序集合：点赞排序、排行榜</p>
+<p>更多参考:</p>
+<p><a href="https://mengkang.net/356.html" target="_blank" rel="noopener">Redis 各种数据类型的使用场景举例分析</a></p>
+<p><a href="https://mengkang.net/1181.html" target="_blank" rel="noopener">Redis面试题</a></p>
 <p><strong>MyISAM和Innodb存储引擎的区别</strong>    </p>
 <p><strong>设计一个并发50万的应用架构</strong></p>
 <p><strong>高并发系统设计，如抽奖系统如何保证库存</strong></p>
