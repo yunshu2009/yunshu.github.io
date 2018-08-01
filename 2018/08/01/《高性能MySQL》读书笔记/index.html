@@ -110,7 +110,7 @@
 <meta property="og:site_name" content="云舒的个人博客">
 <meta property="og:description" content="Schema与数据类型优化选择的优化的数据类型 一般情况下，应该尽量使用可以正确存储数据的最小数据类型。更小的数据类型通常更快，因为他们占用更少的磁盘、内存和CPU缓存，并且处理时需要的CPU周期更少。  使用简单的数据类型。例如，整型比字符串操作代价更低，因为字符串集和校对规则（排序规则）使字符比较比整形比较更复杂。另外，应该使用应该使用mysql的内建类型而不是字符串存储日期和时间，应该使用整">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2018-08-01T11:04:30.000Z">
+<meta property="og:updated_time" content="2018-08-01T11:07:41.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="《高性能MySQL》读书笔记">
 <meta name="twitter:description" content="Schema与数据类型优化选择的优化的数据类型 一般情况下，应该尽量使用可以正确存储数据的最小数据类型。更小的数据类型通常更快，因为他们占用更少的磁盘、内存和CPU缓存，并且处理时需要的CPU周期更少。  使用简单的数据类型。例如，整型比字符串操作代价更低，因为字符串集和校对规则（排序规则）使字符比较比整形比较更复杂。另外，应该使用应该使用mysql的内建类型而不是字符串存储日期和时间，应该使用整">
@@ -388,6 +388,7 @@
 <li><p>尽量避免NULL值。使用NULL的列会使用更多的存储空间，在MySQL里需要特殊处理。当可为NULL的列被索引时，每个索引需要一个额外的字节，在MyISAM里甚至可能导致固定大小的所有（例如只有一个整形列的索引）变成可大可小的索引。通过把可为NULL的列改为NOT NULL带来的性能提升比较小，如果不确定这回导致性能瓶颈问题不必要首先修改。如果计划在列上建索引，就尽量避免设计成可为NULL的列。</p>
 </li>
 </ol>
+<a id="more"></a>
 <p>MySQL为了兼容性支持了很多别名，例如INTEGER、BOOL以及NUMERIC, 他们只是别名。这些别名不会影响性能。如果建表时采用数据类型的别名，用<code>SHOW CREATE TABLE</code>可以发现报告的是基本数据类型，而不是别名。</p>
 <ul>
 <li>整型类型</li>
