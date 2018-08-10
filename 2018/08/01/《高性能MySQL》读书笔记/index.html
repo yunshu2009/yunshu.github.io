@@ -110,7 +110,7 @@
 <meta property="og:site_name" content="云舒的个人博客">
 <meta property="og:description" content="Schema与数据类型优化选择的优化的数据类型 一般情况下，应该尽量使用可以正确存储数据的最小数据类型。更小的数据类型通常更快，因为他们占用更少的磁盘、内存和CPU缓存，并且处理时需要的CPU周期更少。  使用简单的数据类型。例如，整型比字符串操作代价更低，因为字符串集和校对规则（排序规则）使字符比较比整形比较更复杂。另外，应该使用应该使用mysql的内建类型而不是字符串存储日期和时间，应该使用整">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2018-08-01T11:07:41.000Z">
+<meta property="og:updated_time" content="2018-08-10T03:28:56.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="《高性能MySQL》读书笔记">
 <meta name="twitter:description" content="Schema与数据类型优化选择的优化的数据类型 一般情况下，应该尽量使用可以正确存储数据的最小数据类型。更小的数据类型通常更快，因为他们占用更少的磁盘、内存和CPU缓存，并且处理时需要的CPU周期更少。  使用简单的数据类型。例如，整型比字符串操作代价更低，因为字符串集和校对规则（排序规则）使字符比较比整形比较更复杂。另外，应该使用应该使用mysql的内建类型而不是字符串存储日期和时间，应该使用整">
@@ -452,6 +452,35 @@
 <li><p>适度使用NULL值，减少应用复杂程度，避免引入奇怪的BUG。</p>
 </li>
 </ol>
+<h2 id="创建高性能的索引"><a href="#创建高性能的索引" class="headerlink" title="创建高性能的索引"></a>创建高性能的索引</h2><h3 id="索引的类型"><a href="#索引的类型" class="headerlink" title="索引的类型"></a>索引的类型</h3><h4 id="B-Tree-索引"><a href="#B-Tree-索引" class="headerlink" title="B-Tree 索引"></a>B-Tree 索引</h4><p>大家一般说索引的时候， 如果没有特别指明类型， 多半说的是<code>B-Tree</code>索引，它使用<code>B-Tree</code>数据结构来存储数据。</p>
+<p><code>B-Tree</code>通常意味着所有的值都是按顺序存储的，并且每一个叶子页到根的距离相同。</p>
+<p><code>B-Tree</code>索引使用与全键值、键值范围或者键值前缀前缀查找。其中键前缀查找只适用于根据最左前缀的查找。对如下类型的查询有效。</p>
+<p><strong>全值匹配</strong></p>
+<p>全值匹配值的是和索引中的所有列进行匹配。</p>
+<p><strong>匹配最左前缀</strong></p>
+<p>查询只使用到索引的第一列。</p>
+<p><strong>匹配列前缀</strong></p>
+<p>只匹配某列的值的开头部分。 如使用<code>like</code>查询索引匹配第一列的前面部分字符。</p>
+<p><strong>匹配范围值</strong></p>
+<p>使用<code>B-Tree</code>索引的限制</p>
+<ul>
+<li>如果不是按照索引的最左列开始查找，则无法使用索引。</li>
+</ul>
+<p>（查询必须包含最左列，并且不能查询左列以某字母结尾的行，才能使用到索引）</p>
+<h4 id="哈希索引"><a href="#哈希索引" class="headerlink" title="哈希索引"></a>哈希索引</h4><p>哈希索引（hash index）基于哈希表实现，只有精确匹配所有列的查询才有效。对于每一行数据，存储引擎都会对所有的索引列计算出一个哈希码（hash code）,哈希码是一个较小的值，并且在不同的键值的行计算出来的哈希码也不一样。哈希索引将所有的哈希码存储在所有中，同时在哈希表中保存指向每个数据行的指针。</p>
+<p>哈希索引的限制</p>
+<ul>
+<li><p>哈希索引数据不是按照索引值顺序存储的，无法用于排序。</p>
+</li>
+<li><p>哈希索引值只支持等值比较查询。</p>
+</li>
+</ul>
+<p>可以使用SRC32()做为哈希函数存储哈希值，但是如果数据量很大，会出现哈希冲突的情况。</p>
+<p>不要使用SHA1()和MD5()作为哈希函数。这两个函数计算出来的哈希值是一个非常长的字符串，会浪费大量的空间，比较时也比较慢。</p>
+<p>要解决冲突问题，必须在where条件中带入哈希值和对应的列值。</p>
+<p><code>select world,crc from words where cc=CRC32(&#39;gnu&#39;) and word=&#39;gnu&#39;</code></p>
+<p>还可以使用FNV64()函数作为哈希函数解决冲突。FNV64()哈希值为64位，速度快，且冲突比CRC32()要少的多。</p>
+<h4 id="全文索引"><a href="#全文索引" class="headerlink" title="全文索引"></a>全文索引</h4><p>全文索引必须要使用关键词<code>MATCH</code>和<code>AGAINST</code>，而不是使用<code>WHERE</code>进行搜索。</p>
 
       
     </div>
@@ -778,7 +807,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Schema与数据类型优化"><span class="nav-number">1.</span> <span class="nav-text">Schema与数据类型优化</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#选择的优化的数据类型"><span class="nav-number">1.1.</span> <span class="nav-text">选择的优化的数据类型</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#MySQL-schema设计的一些指导原则"><span class="nav-number">1.2.</span> <span class="nav-text">MySQL schema设计的一些指导原则</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Schema与数据类型优化"><span class="nav-number">1.</span> <span class="nav-text">Schema与数据类型优化</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#选择的优化的数据类型"><span class="nav-number">1.1.</span> <span class="nav-text">选择的优化的数据类型</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#MySQL-schema设计的一些指导原则"><span class="nav-number">1.2.</span> <span class="nav-text">MySQL schema设计的一些指导原则</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#创建高性能的索引"><span class="nav-number">2.</span> <span class="nav-text">创建高性能的索引</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#索引的类型"><span class="nav-number">2.1.</span> <span class="nav-text">索引的类型</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#B-Tree-索引"><span class="nav-number">2.1.1.</span> <span class="nav-text">B-Tree 索引</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#哈希索引"><span class="nav-number">2.1.2.</span> <span class="nav-text">哈希索引</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#全文索引"><span class="nav-number">2.1.3.</span> <span class="nav-text">全文索引</span></a></li></ol></li></ol></li></ol></div>
             
 
           </div>
