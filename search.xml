@@ -3,7 +3,11 @@
   <entry>
     <title><![CDATA[一些Linux基本命令与其它相关]]></title>
     <url>%2F2018%2F08%2F16%2F%E4%B8%80%E4%BA%9BLinux%E5%9F%BA%E6%9C%AC%E5%91%BD%E4%BB%A4%E4%B8%8E%E5%85%B6%E5%AE%83%E7%9B%B8%E5%85%B3%2F</url>
-    <content type="text"><![CDATA[Linux命令文件查找 findfind 参数很多，本文只介绍几个常用的 -name 按名字查找 -type 按类型 -atime 访问时间 123find . -atime 7 -type f -printfind . -type d -print //只列出所有目录find / -name &quot;hello.c&quot; 查找hello.c文件 crontab定时任务过crontab 命令，我们可以在固定的间隔时间执行指定的系统指令或shell脚本。时间间隔的单位可以是分钟、小时、日、月、周及以上的任意组合。这个命令非常适合周期性的日志分析或数据备份等工作。 crontab的文件格式 分 时 日 月 星期 要运行的命令 第1列分钟0～59第2列小时0～23（0表示子夜）第3列日1～31第4列月1～12第5列星期0～7（0和7表示星期天）第6列要运行的命令 实例： 1234* * * * * command # 每1分钟执行command命令3,15 * * * * command # 每小时第三分钟和第五分钟执行3,15 8-11 * * * command #在上午8点到11点的第3和第15分钟执行3,15 8-11 */2 * * command # 每隔两天的上午8点到11点的第3和第15分钟执行 参考资料Linux中more和less命令用法 https://www.cnblogs.com/aijianshi/p/5750911.html AWK程序设计指南 https://awk.readthedocs.io/en/latest/chapter-one.html]]></content>
+    <content type="text"><![CDATA[Linux命令文件查找 findfind 参数很多，本文只介绍几个常用的 -name 按名字查找 -type 按类型 -atime 访问时间 123find . -atime 3 -type f -print // 列入当前目录下前3天访问过的文件find . -type d -print // 只列出所有目录find / -name &quot;test.txt&quot; 查找test.txt文件 字符替换 tr将字符转换为大写 1cat test.txt | tr a-z A-Z 文本替换 sed移除空白行，加上-i选项表示将更改写入文件 统计 wc123wc -l file 统计行数wc -w file // 统计单词数wc -c file // 统计字符数 1sed &apos;/^$/d&apos; file crontab定时任务过crontab 命令，我们可以在固定的间隔时间执行指定的系统指令或shell脚本。时间间隔的单位可以是分钟、小时、日、月、周及以上的任意组合。这个命令非常适合周期性的日志分析或数据备份等工作。 crontab的文件格式 分 时 日 月 星期 要运行的命令 第1列分钟0～59第2列小时0～23（0表示子夜）第3列日1～31第4列月1～12第5列星期0～7（0和7表示星期天）第6列要运行的命令 实例： 1234* * * * * command # 每1分钟执行command命令3,15 * * * * command # 每小时第三分钟和第五分钟执行3,15 8-11 * * * command #在上午8点到11点的第3和第15分钟执行3,15 8-11 */2 * * command # 每隔两天的上午8点到11点的第3和第15分钟执行 参考资料Linux中more和less命令用法 https://www.cnblogs.com/aijianshi/p/5750911.html AWK程序设计指南 https://awk.readthedocs.io/en/latest/chapter-one.html 命令手册 http://www.runoob.com/linux/linux-command-manual.html]]></content>
+      <tags>
+        <tag>Linux</tag>
+        <tag>AWK</tag>
+      </tags>
   </entry>
   <entry>
     <title><![CDATA[MongoDB入门]]></title>
