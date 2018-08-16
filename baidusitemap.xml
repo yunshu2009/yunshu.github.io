@@ -4,6 +4,25 @@
 
     
   <url>
+    <loc>http://yunshu.me/2018/08/17/Redis%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</loc>
+    <lastmod>2018-08-16T23:32:26.000Z</lastmod>
+    <data>
+        <display>
+        <title>Redis学习笔记</title>
+        <pubTime>2018-08-16T23:12:08.000Z</pubTime>
+        
+        <tag>Redis</tag>
+         
+        <tag>NOSQL</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://yunshu.me/2018/08/16/%E4%B8%80%E4%BA%9BLinux%E5%9F%BA%E6%9C%AC%E5%91%BD%E4%BB%A4%E4%B8%8E%E5%85%B6%E5%AE%83%E7%9B%B8%E5%85%B3/</loc>
     <lastmod>2018-08-16T16:14:01.000Z</lastmod>
     <data>
@@ -30,9 +49,9 @@
         <title>MongoDB入门</title>
         <pubTime>2018-08-16T06:12:24.000Z</pubTime>
         
-        <tag>MongoDB</tag>
-         
         <tag>NOSQL</tag>
+         
+        <tag>MongoDB</tag>
          
          
            
