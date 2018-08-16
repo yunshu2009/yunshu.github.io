@@ -4,13 +4,36 @@
 
     
   <url>
+    <loc>http://yunshu.me/2018/04/07/thinkphp5-source-reading/</loc>
+    <lastmod>2018-08-16T00:31:36.000Z</lastmod>
+    <data>
+        <display>
+        <title>thinkphp5 “$this->redirect()” 到底经历了啥</title>
+        <pubTime>2018-04-07T15:04:01.000Z</pubTime>
+        
+        <tag>php</tag>
+         
+        <tag>thinkphp</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://yunshu.me/2018/08/16/%E4%BD%BF%E7%94%A8websocket%E6%9B%BF%E4%BB%A3ajax%E5%8A%A0%E5%BF%AB%E7%BD%91%E7%AB%99%E8%AE%BF%E9%97%AE%E9%80%9F%E5%BA%A6/</loc>
-    <lastmod>2018-08-16T00:25:05.000Z</lastmod>
+    <lastmod>2018-08-16T00:30:22.000Z</lastmod>
     <data>
         <display>
         <title>使用websocket替代ajax加快网站访问速度</title>
         <pubTime>2018-08-15T23:05:24.000Z</pubTime>
         
+        <tag>php</tag>
+         
+        <tag>websocket</tag>
+         
          
            
         </display>
@@ -42,23 +65,6 @@
         <title>《高性能MySQL》读书笔记</title>
         <pubTime>2018-08-01T11:02:35.000Z</pubTime>
         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://yunshu.me/2018/04/07/thinkphp5-source-reading/</loc>
-    <lastmod>2018-05-24T14:50:58.000Z</lastmod>
-    <data>
-        <display>
-        <title>thinkphp5 “$this->redirect()” 到底经历了啥</title>
-        <pubTime>2018-04-07T15:04:01.000Z</pubTime>
-        
-        <tag>php,thankphp</tag>
-         
          
            
         </display>
