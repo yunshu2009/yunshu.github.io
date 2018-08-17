@@ -103,18 +103,18 @@
   <meta name="keywords" content="NOSQL,Redis," />
 
 
-<meta name="description" content="云舒的个人博客">
+<meta name="description" content="什么Redis？Redis是一个开源的使用 ANSI C 语言编写、遵守BSD协议、基于内存并可持久化的 K-V 非关系型数据库。 Redis 和 Memcache的区别 Redis 数据类型丰富。Redis不仅仅支持简单的数据类型，还支持list、set、sortedset、hash等数据结构。  Redis可利用虚拟内存。Redis 当物理内存用完时，可以将一些很久没用到的 value 交换到">
 <meta name="keywords" content="NOSQL,Redis">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Redis学习笔记">
 <meta property="og:url" content="http://yunshu.me/2018/08/17/Redis学习笔记/index.html">
 <meta property="og:site_name" content="云舒的个人博客">
-<meta property="og:description" content="云舒的个人博客">
+<meta property="og:description" content="什么Redis？Redis是一个开源的使用 ANSI C 语言编写、遵守BSD协议、基于内存并可持久化的 K-V 非关系型数据库。 Redis 和 Memcache的区别 Redis 数据类型丰富。Redis不仅仅支持简单的数据类型，还支持list、set、sortedset、hash等数据结构。  Redis可利用虚拟内存。Redis 当物理内存用完时，可以将一些很久没用到的 value 交换到">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2018-08-16T23:32:26.000Z">
+<meta property="og:updated_time" content="2018-08-17T10:34:21.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Redis学习笔记">
-<meta name="twitter:description" content="云舒的个人博客">
+<meta name="twitter:description" content="什么Redis？Redis是一个开源的使用 ANSI C 语言编写、遵守BSD协议、基于内存并可持久化的 K-V 非关系型数据库。 Redis 和 Memcache的区别 Redis 数据类型丰富。Redis不仅仅支持简单的数据类型，还支持list、set、sortedset、hash等数据结构。  Redis可利用虚拟内存。Redis 当物理内存用完时，可以将一些很久没用到的 value 交换到">
 
 
 
@@ -381,7 +381,70 @@
       
 
       
-        
+        <h2 id="什么Redis？"><a href="#什么Redis？" class="headerlink" title="什么Redis？"></a>什么Redis？</h2><p>Redis是一个开源的使用 ANSI C 语言编写、遵守BSD协议、基于内存并可持久化的 K-V 非关系型数据库。</p>
+<h2 id="Redis-和-Memcache的区别"><a href="#Redis-和-Memcache的区别" class="headerlink" title="Redis 和 Memcache的区别"></a>Redis 和 Memcache的区别</h2><ul>
+<li><p>Redis 数据类型丰富。Redis不仅仅支持简单的数据类型，还支持list、set、sortedset、hash等数据结构。</p>
+</li>
+<li><p>Redis可利用虚拟内存。Redis 当物理内存用完时，可以将一些很久没用到的 value 交换到磁盘。</p>
+</li>
+<li><p>Redis 支持数据持久化。当 Memcache 挂掉后，数据就没了。而 Redis 可以定期将数据保存到磁盘。</p>
+</li>
+</ul>
+<a id="more"></a>
+<ul>
+<li><p>Redis 支持灾难恢复。当Memcache挂掉后，数据不可恢复; 而 Redis 数据丢失后可以通过AOF 恢复。</p>
+</li>
+<li><p>Redis 支持数据的备份。Redis支持<code>master-slave</code>模式的数据备份。</p>
+</li>
+</ul>
+<h2 id="Redis-数据结构"><a href="#Redis-数据结构" class="headerlink" title="Redis 数据结构"></a>Redis 数据结构</h2><ul>
+<li><p>String （字符串）</p>
+</li>
+<li><p>List （列表）</p>
+</li>
+<li><p>Hash（散列）</p>
+</li>
+<li><p>Set （集合）</p>
+</li>
+<li><p>SortedSet （有序集合）</p>
+</li>
+<li><p>HyperLogLog</p>
+</li>
+</ul>
+<p>Redis 各种数据类型的使用场景举例分析 <a href="https://mengkang.net/356.html" target="_blank" rel="noopener">https://mengkang.net/356.html</a></p>
+<h2 id="Redis-操作命令"><a href="#Redis-操作命令" class="headerlink" title="Redis 操作命令"></a>Redis 操作命令</h2><p>参考：</p>
+<ul>
+<li><p>Redis 命令参考 <a href="http://redisdoc.com/index.html" target="_blank" rel="noopener">http://redisdoc.com/index.html</a> </p>
+</li>
+<li><p>Redis 命令速查手册 <a href="https://raw.githubusercontent.com/huangz1990/redis-cheatsheet/master/redis-cheatsheet.pdf" target="_blank" rel="noopener">https://raw.githubusercontent.com/huangz1990/redis-cheatsheet/master/redis-cheatsheet.pdf</a></p>
+</li>
+</ul>
+<h2 id="关于-Redis-的持久化"><a href="#关于-Redis-的持久化" class="headerlink" title="关于 Redis 的持久化"></a>关于 Redis 的持久化</h2><p>Redis 中有两种方法进行持久化，一种是快照，一种是Append-only。</p>
+<h3 id="快照"><a href="#快照" class="headerlink" title="快照"></a>快照</h3><p>Redis 以快照的形式将数据保存到一个二进制文件中（dump.rdb，名字可更改），在配置在N秒之内，至少发生M次修改则抓快照到磁盘（配置项：save N M）。我们也可以手动执行save 或者 bgsave（异步）做快照。</p>
+<p>优点：不会太影响性能</p>
+<p>缺点：Redis 挂掉后，最近的数据会丢失。当业务量很大时，会丢失很多数据（丢失数据的多少视取决于你 save 策略的配置）。</p>
+<h3 id="Append-only"><a href="#Append-only" class="headerlink" title="Append-only"></a>Append-only</h3><p>使用 Append-only 方法（Redis 配置项：appendonly yes/no），Redis 可以每执行一个命令或者每隔1秒，都会添加到 AOF 文件中（取决于 Redis 配置项：appendfsync everysec/always/no）。当 Redis 关闭后，将会读取 AOF 文件进行“重放”以恢复到关闭时刻的数据。</p>
+<p>优点：丢失数据较少</p>
+<p>缺点：非常影响 Redis 性能</p>
+<p>我们一般使用 Redis 作缓存使用，所以一般不会使用 AOF方法而是选择快照方法进行持久化。</p>
+<h2 id="Redis-同步机制"><a href="#Redis-同步机制" class="headerlink" title="Redis 同步机制"></a>Redis 同步机制</h2><p>Redis 可以使用主从同步，从从同步。第一次同步时，主节点做一次 bgsave，并同时将后续修改操作记录到内存buffer，待完成后将 rdb 文件全量同步到复制节点，复制节点接受完成后将rdb镜像加载到内存。加载完成后，再通知主节点将期间修改的操作记录同步到复制节点进行重放就完成了同步过程。</p>
+<h2 id="Redis集群"><a href="#Redis集群" class="headerlink" title="Redis集群"></a>Redis集群</h2><h2 id="PHP-操作-Redis"><a href="#PHP-操作-Redis" class="headerlink" title="PHP 操作 Redis"></a>PHP 操作 Redis</h2><p>PHP 操作 Redis，可查看 phpredis 的 github 仓库：<a href="https://github.com/phpredis/phpredis" target="_blank" rel="noopener">https://github.com/phpredis/phpredis</a></p>
+<h2 id="Python-中操作-Redis"><a href="#Python-中操作-Redis" class="headerlink" title="Python 中操作 Redis"></a>Python 中操作 Redis</h2><h2 id="Redis-客户端工具"><a href="#Redis-客户端工具" class="headerlink" title="Redis 客户端工具"></a>Redis 客户端工具</h2><!--more-->
+<h2 id="Redis的使用场景"><a href="#Redis的使用场景" class="headerlink" title="Redis的使用场景"></a>Redis的使用场景</h2><ul>
+<li><p>会话缓存</p>
+</li>
+<li><p>热点数据缓存</p>
+</li>
+<li><p>队列</p>
+</li>
+<li><p>排行榜/计数器</p>
+</li>
+<li><p>发布/订阅</p>
+</li>
+</ul>
+<h2 id="其它链接"><a href="#其它链接" class="headerlink" title="其它链接"></a>其它链接</h2><p>Redis在线测试 <a href="http://try.redis.io/" target="_blank" rel="noopener">http://try.redis.io/</a></p>
+<p>天下无难试之Redis面试刁难大全 <a href="https://mp.weixin.qq.com/s/507jyNbL4xCkxyW6Xk15Xg" target="_blank" rel="noopener">https://mp.weixin.qq.com/s/507jyNbL4xCkxyW6Xk15Xg</a></p>
+
       
     </div>
 
@@ -573,8 +636,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -716,6 +788,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#什么Redis？"><span class="nav-number">1.</span> <span class="nav-text">什么Redis？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Redis-和-Memcache的区别"><span class="nav-number">2.</span> <span class="nav-text">Redis 和 Memcache的区别</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Redis-数据结构"><span class="nav-number">3.</span> <span class="nav-text">Redis 数据结构</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Redis-操作命令"><span class="nav-number">4.</span> <span class="nav-text">Redis 操作命令</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#关于-Redis-的持久化"><span class="nav-number">5.</span> <span class="nav-text">关于 Redis 的持久化</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#快照"><span class="nav-number">5.1.</span> <span class="nav-text">快照</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Append-only"><span class="nav-number">5.2.</span> <span class="nav-text">Append-only</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Redis-同步机制"><span class="nav-number">6.</span> <span class="nav-text">Redis 同步机制</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Redis集群"><span class="nav-number">7.</span> <span class="nav-text">Redis集群</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#PHP-操作-Redis"><span class="nav-number">8.</span> <span class="nav-text">PHP 操作 Redis</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Python-中操作-Redis"><span class="nav-number">9.</span> <span class="nav-text">Python 中操作 Redis</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Redis-客户端工具"><span class="nav-number">10.</span> <span class="nav-text">Redis 客户端工具</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Redis的使用场景"><span class="nav-number">11.</span> <span class="nav-text">Redis的使用场景</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#其它链接"><span class="nav-number">12.</span> <span class="nav-text">其它链接</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
