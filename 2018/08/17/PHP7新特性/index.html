@@ -103,18 +103,18 @@
   <meta name="keywords" content="PHP," />
 
 
-<meta name="description" content="目前 PHP 的最新版本是 7.2.9 ，从 PHP 5.6 到 PHP 7 发生了许多变化。在Mac系统下可用php-version工具来切换php版本。 参考资料：  http://php.net/manual/zh/migration70.new-features.php  http://php.net/manual/zh/migration71.new-features.php  http">
+<meta name="description" content="目前 PHP 的最新版本是 7.2.9 ，从 PHP 5.6 到 PHP 7 发生了许多变化。在Mac系统下可用php-version工具来切换php版本。 参考资料：  http://php.net/manual/zh/appendices.php  https://mengkang.net/1019.html   一些PHP 7.0 新特性/变更7.0 新特性 null合并运算符  变量类型声">
 <meta name="keywords" content="PHP">
 <meta property="og:type" content="article">
 <meta property="og:title" content="PHP7新特性">
 <meta property="og:url" content="http://yunshu.me/2018/08/17/PHP7新特性/index.html">
 <meta property="og:site_name" content="云舒的个人博客">
-<meta property="og:description" content="目前 PHP 的最新版本是 7.2.9 ，从 PHP 5.6 到 PHP 7 发生了许多变化。在Mac系统下可用php-version工具来切换php版本。 参考资料：  http://php.net/manual/zh/migration70.new-features.php  http://php.net/manual/zh/migration71.new-features.php  http">
+<meta property="og:description" content="目前 PHP 的最新版本是 7.2.9 ，从 PHP 5.6 到 PHP 7 发生了许多变化。在Mac系统下可用php-version工具来切换php版本。 参考资料：  http://php.net/manual/zh/appendices.php  https://mengkang.net/1019.html   一些PHP 7.0 新特性/变更7.0 新特性 null合并运算符  变量类型声">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2018-08-17T05:54:27.000Z">
+<meta property="og:updated_time" content="2018-08-17T08:22:48.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="PHP7新特性">
-<meta name="twitter:description" content="目前 PHP 的最新版本是 7.2.9 ，从 PHP 5.6 到 PHP 7 发生了许多变化。在Mac系统下可用php-version工具来切换php版本。 参考资料：  http://php.net/manual/zh/migration70.new-features.php  http://php.net/manual/zh/migration71.new-features.php  http">
+<meta name="twitter:description" content="目前 PHP 的最新版本是 7.2.9 ，从 PHP 5.6 到 PHP 7 发生了许多变化。在Mac系统下可用php-version工具来切换php版本。 参考资料：  http://php.net/manual/zh/appendices.php  https://mengkang.net/1019.html   一些PHP 7.0 新特性/变更7.0 新特性 null合并运算符  变量类型声">
 
 
 
@@ -384,45 +384,37 @@
         <p>目前 PHP 的最新版本是 7.2.9 ，从 PHP 5.6 到 PHP 7 发生了许多变化。在Mac系统下可用<code>php-version</code>工具来切换php版本。</p>
 <p>参考资料：</p>
 <ul>
-<li><p><a href="http://php.net/manual/zh/migration70.new-features.php" target="_blank" rel="noopener">http://php.net/manual/zh/migration70.new-features.php</a></p>
+<li><p><a href="http://php.net/manual/zh/appendices.php" target="_blank" rel="noopener">http://php.net/manual/zh/appendices.php</a></p>
 </li>
-<li><p><a href="http://php.net/manual/zh/migration71.new-features.php" target="_blank" rel="noopener">http://php.net/manual/zh/migration71.new-features.php</a></p>
-</li>
-<li><p><a href="http://php.net/manual/zh/migration72.new-features.php" target="_blank" rel="noopener">http://php.net/manual/zh/migration72.new-features.php</a></p>
+<li><p><a href="https://mengkang.net/1019.html" target="_blank" rel="noopener">https://mengkang.net/1019.html</a></p>
 </li>
 </ul>
-<a id="more"></a>
-<ul>
-<li><a href="https://mengkang.net/1019.html" target="_blank" rel="noopener">https://mengkang.net/1019.html</a></li>
-</ul>
-<ul>
-<li><a href="https://github.com/xianyunyh/PHP-Interview/blob/master/PHP/php7.md" target="_blank" rel="noopener">https://github.com/xianyunyh/PHP-Interview/blob/master/PHP/php7.md</a></li>
-</ul>
-<h2 id="一些PHP-7-0-新特性"><a href="#一些PHP-7-0-新特性" class="headerlink" title="一些PHP 7.0 新特性"></a>一些PHP 7.0 新特性</h2><ul>
-<li><p>MYSQL 扩展被移除</p>
-</li>
+<h2 id="一些PHP-7-0-新特性-变更"><a href="#一些PHP-7-0-新特性-变更" class="headerlink" title="一些PHP 7.0 新特性/变更"></a>一些PHP 7.0 新特性/变更</h2><h3 id="7-0-新特性"><a href="#7-0-新特性" class="headerlink" title="7.0 新特性"></a>7.0 新特性</h3><ul>
 <li><p>null合并运算符</p>
 </li>
 <li><p>变量类型声明</p>
 </li>
-<li><p>返回值类型声明</p>
-</li>
+</ul>
+<a id="more"></a>
+<ul>
+<li>返回值类型声明</li>
 </ul>
 <ul>
-<li><p>组合比较符（添加’&lt;=&gt;’运算符）</p>
-</li>
+<li>组合比较符（添加’&lt;=&gt;’运算符）</li>
+</ul>
+<p>组合比较符用于比较两个表达式。当$a小于、等于或大于$b时它分别返回-1、0或1。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&lt;?php</span><br><span class="line">// 整数</span><br><span class="line">echo 1 &lt;=&gt; 1; // 0</span><br><span class="line">echo 1 &lt;=&gt; 2; // -1</span><br><span class="line">echo 2 &lt;=&gt; 1; // 1</span><br></pre></td></tr></table></figure>
+<ul>
 <li><p>通过define()定义常量数组</p>
 </li>
 <li><p>支持通过<code>new class</code>来实例化一个匿名类</p>
 </li>
-<li><p>Closure::call()新式闭包绑定</p>
-</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line">&lt;?php</span><br><span class="line">interface Logger &#123;</span><br><span class="line">    public function log(string $msg);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">class Application &#123;</span><br><span class="line">    private $logger;</span><br><span class="line"></span><br><span class="line">    public function getLogger(): Logger &#123;</span><br><span class="line">         return $this-&gt;logger;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    public function setLogger(Logger $logger) &#123;</span><br><span class="line">         $this-&gt;logger = $logger;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">$app = new Application;</span><br><span class="line">$app-&gt;setLogger(new class implements Logger &#123;</span><br><span class="line">    public function log(string $msg) &#123;</span><br><span class="line">        echo $msg;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line">var_dump($app-&gt;getLogger());</span><br><span class="line">?&gt;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>Closure::call()新式闭包绑定</li>
 </ul>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">&lt;?php</span><br><span class="line">class A &#123;private $x = 1;&#125;</span><br><span class="line"></span><br><span class="line">// PHP 7 之前版本的代码</span><br><span class="line">$getXCB = function() &#123;return $this-&gt;x;&#125;;</span><br><span class="line">$getX = $getXCB-&gt;bindTo(new A, &apos;A&apos;); // 中间层闭包</span><br><span class="line">echo $getX();</span><br><span class="line"></span><br><span class="line">// PHP 7+ 及更高版本的代码</span><br><span class="line">$getX = function() &#123;return $this-&gt;x;&#125;;</span><br><span class="line">echo $getX-&gt;call(new A);</span><br></pre></td></tr></table></figure>
-<ul>
-<li>$HTTP_RAW_POST_DATA 被移除</li>
-</ul>
-<p>$HTTP_RAW_POST_DATA 被移除，使用php://input代替</p>
 <ul>
 <li>预期</li>
 </ul>
@@ -436,7 +428,34 @@
 <li>会话选项</li>
 </ul>
 <p>session_start() 可以接受一个 array 作为参数， 用来覆盖 php.ini 文件中设置的 会话配置选项。</p>
-<h2 id="一些-7-1-新特性"><a href="#一些-7-1-新特性" class="headerlink" title="一些 7.1 新特性"></a>一些 7.1 新特性</h2><ul>
+<h3 id="不向后兼容的变更"><a href="#不向后兼容的变更" class="headerlink" title="不向后兼容的变更"></a>不向后兼容的变更</h3><h4 id="错误和异常处理相关的变更"><a href="#错误和异常处理相关的变更" class="headerlink" title="错误和异常处理相关的变更"></a>错误和异常处理相关的变更</h4><p>在 PHP 7 中，很多致命错误以及可恢复的致命错误，都被转换为异常来处理了。 这些异常继承自 Error 类，此类实现了 Throwable 接口 （所有异常都实现了这个基础接口）</p>
+<p>Throwable层次结构</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">interface Throwable</span><br><span class="line">    |- Exception implements Throwable</span><br><span class="line">        |- ...</span><br><span class="line">    |- Error implements Throwable</span><br><span class="line">        |- TypeError extends Error</span><br><span class="line">        |- ParseError extends Error</span><br><span class="line">        |- AssertionError extends Error</span><br><span class="line">        |- ArithmeticError extends Error</span><br><span class="line">            |- DivisionByZeroError extends ArithmeticError</span><br></pre></td></tr></table></figure>
+<p>为了兼容 PHP 5 和 PHP 7, 应该修改set_exception_handler()， 不应该指定参数类型为Exception，因为传递进来的参数类型可能为Error。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">// PHP 5 时代的代码将会出现问题</span><br><span class="line">function handler(Exception $e) &#123;  &#125;</span><br><span class="line">set_exception_handler(&apos;handler&apos;);</span><br><span class="line"></span><br><span class="line">// 兼容 PHP 5 和 7</span><br><span class="line">function handler($e) &#123;  &#125;</span><br><span class="line"></span><br><span class="line">// 仅支持 PHP 7</span><br><span class="line">function handler(Throwable $e) &#123; &#125;</span><br></pre></td></tr></table></figure>
+<h4 id="被移除的函数"><a href="#被移除的函数" class="headerlink" title="被移除的函数"></a>被移除的函数</h4><ul>
+<li><p>所有的ereg*函数</p>
+</li>
+<li><p>mcrypt 别名<br>已废弃的 mcrypt_generic_end() 函数已被移除，请使用mcrypt_generic_deinit()代替。</p>
+</li>
+</ul>
+<p>此外，已废弃的 mcrypt_ecb(), mcrypt_cbc(), mcrypt_cfb() 和 mcrypt_ofb() 函数已被移除，请配合恰当的MCRYPT<em>MODE</em>* 常量来使用 mcrypt_decrypt()进行代替</p>
+<ul>
+<li>所有 ext/mysql 函数</li>
+</ul>
+<h4 id="其它变更"><a href="#其它变更" class="headerlink" title="其它变更"></a>其它变更</h4><ul>
+<li>$HTTP_RAW_POST_DATA 被移除</li>
+</ul>
+<p>$HTTP_RAW_POST_DATA 被移除，使用php://input代替</p>
+<ul>
+<li>new 操作符创建的对象不能以引用方式赋值给变量</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">&lt;?php</span><br><span class="line">class C &#123;&#125;</span><br><span class="line">$c =&amp; new C;</span><br><span class="line">?&gt;</span><br></pre></td></tr></table></figure>
+<p>在 PHP 7 中将发生语法错误</p>
+<ul>
+<li>在 PHP 7 中使用 PHP4 风格的构造函数，PHP7 会产生 E_DEPRECATED 警告。 如果还定义了 __construct() 方法则不受影响。</li>
+</ul>
+<h2 id="一些-7-1-新特性-变更"><a href="#一些-7-1-新特性-变更" class="headerlink" title="一些 7.1 新特性/变更"></a>一些 7.1 新特性/变更</h2><h3 id="新特性"><a href="#新特性" class="headerlink" title="新特性"></a>新特性</h3><ul>
 <li><p>添加返回值类型void</p>
 </li>
 <li><p>短数组语法[]</p>
@@ -454,6 +473,14 @@
 <li><p>支持为负的字符串偏移量</p>
 </li>
 </ul>
+<h3 id="不向后兼容的变更-1"><a href="#不向后兼容的变更-1" class="headerlink" title="不向后兼容的变更"></a>不向后兼容的变更</h3><ul>
+<li>当传递参数过少时将抛出错误</li>
+</ul>
+<p>在之前传递参数过少时将抛出警告（warning），现在将抛出异常（Error execption）。</p>
+<h3 id="废弃的特性"><a href="#废弃的特性" class="headerlink" title="废弃的特性"></a>废弃的特性</h3><ul>
+<li>移除ext/mcrypt</li>
+</ul>
+<p>此扩展被 OpenSSL 所取代。</p>
 
       
     </div>
@@ -802,7 +829,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#一些PHP-7-0-新特性"><span class="nav-number">1.</span> <span class="nav-text">一些PHP 7.0 新特性</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#一些-7-1-新特性"><span class="nav-number">2.</span> <span class="nav-text">一些 7.1 新特性</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#一些PHP-7-0-新特性-变更"><span class="nav-number">1.</span> <span class="nav-text">一些PHP 7.0 新特性/变更</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#7-0-新特性"><span class="nav-number">1.1.</span> <span class="nav-text">7.0 新特性</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#不向后兼容的变更"><span class="nav-number">1.2.</span> <span class="nav-text">不向后兼容的变更</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#错误和异常处理相关的变更"><span class="nav-number">1.2.1.</span> <span class="nav-text">错误和异常处理相关的变更</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#被移除的函数"><span class="nav-number">1.2.2.</span> <span class="nav-text">被移除的函数</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#其它变更"><span class="nav-number">1.2.3.</span> <span class="nav-text">其它变更</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#一些-7-1-新特性-变更"><span class="nav-number">2.</span> <span class="nav-text">一些 7.1 新特性/变更</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#新特性"><span class="nav-number">2.1.</span> <span class="nav-text">新特性</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#不向后兼容的变更-1"><span class="nav-number">2.2.</span> <span class="nav-text">不向后兼容的变更</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#废弃的特性"><span class="nav-number">2.3.</span> <span class="nav-text">废弃的特性</span></a></li></ol></li></ol></div>
             
 
           </div>
