@@ -1,12 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[PHP7新特性]]></title>
+    <url>%2F2018%2F08%2F17%2FPHP7%E6%96%B0%E7%89%B9%E6%80%A7%2F</url>
+    <content type="text"><![CDATA[目前 PHP 的最新版本是 7.2.9 ，从 PHP 5.6 到 PHP 7 发生了许多变化。在Mac系统下可用php-version工具来切换php版本。 参考资料： http://php.net/manual/zh/migration70.new-features.php http://php.net/manual/zh/migration71.new-features.php http://php.net/manual/zh/migration72.new-features.php https://mengkang.net/1019.html https://github.com/xianyunyh/PHP-Interview/blob/master/PHP/php7.md 一些PHP 7.0 新特性 MYSQL 扩展被移除 null合并运算符 变量类型声明 返回值类型声明 组合比较符（添加’&lt;=&gt;’运算符） 通过define()定义常量数组 支持通过new class来实例化一个匿名类 Closure::call()新式闭包绑定 1234567891011&lt;?phpclass A &#123;private $x = 1;&#125;// PHP 7 之前版本的代码$getXCB = function() &#123;return $this-&gt;x;&#125;;$getX = $getXCB-&gt;bindTo(new A, &apos;A&apos;); // 中间层闭包echo $getX();// PHP 7+ 及更高版本的代码$getX = function() &#123;return $this-&gt;x;&#125;;echo $getX-&gt;call(new A); $HTTP_RAW_POST_DATA 被移除 $HTTP_RAW_POST_DATA 被移除，使用php://input代替 预期 提供当断言失败时抛出特定异常的能力 1234567&lt;?phpini_set(&apos;assert.exception&apos;, 1);class CustomError extends AssertionError &#123;&#125;assert(false, new CustomError(&apos;Some error message&apos;)); //结果为Fatal error: Uncaught CustomError: Some error message ?&gt; 新添整数除法函数 intdiv() 1var_dump(intdiv(10, 3)); // int(3) 会话选项 session_start() 可以接受一个 array 作为参数， 用来覆盖 php.ini 文件中设置的 会话配置选项。 一些 7.1 新特性 添加返回值类型void 短数组语法[] 短数组语法（[]）现在作为list()语法的一个备选项，可以用于将数组的值赋给一些变量（包括在foreach中） 1234567891011121314151617181920$data = [ [1, &apos;Tom&apos;], [2, &apos;Fred&apos;],];// list() stylelist($id1, $name1) = $data[0];// [] style[$id1, $name1] = $data[0];// list() styleforeach ($data as list($id, $name)) &#123; // logic here with $id and $name&#125;// [] styleforeach ($data as [$id, $name]) &#123; // logic here with $id and $name&#125; 可设置类常量可见性 多异常捕获处理 list()现在支持键名 支持为负的字符串偏移量 一些 7.2 的新特性]]></content>
+      <tags>
+        <tag>PHP</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[Redis学习笔记]]></title>
     <url>%2F2018%2F08%2F17%2FRedis%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%2F</url>
     <content type="text"></content>
       <tags>
-        <tag>Redis</tag>
         <tag>NOSQL</tag>
+        <tag>Redis</tag>
       </tags>
   </entry>
   <entry>
@@ -23,8 +31,8 @@
     <url>%2F2018%2F08%2F16%2FMongoDB%E5%85%A5%E9%97%A8%2F</url>
     <content type="text"><![CDATA[Mongodb是个开源的，高性能的面向文档的数据库，是为了解决关系数据库schema强约束的问题而产生的。Mongodb没有schema, 经常用JSON格式存储数据。 优点 新增字段简单，直接在程序中新增字段就可以，无须像关系数据库一样先创建表结构。 可以方便的存储复杂的数据。在关系数据库中一条数据需要关联存储在N个表中，在Mongodb中只需一行JSON格式的数据就可描述。 支持丰富的数据类型。 缺点 无法实现关系数据库的JOIN操作。 不支持SQL查询 MongoDB的一些概念SQL术语/概念 MongoDB术语/概念 解释/说明database database 数据库table collection 数据库表/集合row document 数据记录行/文档column field 数据字段/域index index 索引table joins 表连接，MongoDB不支持primary key primary key 主键,MongoDB自动将_id字段设置为主键 使用场景MongoDB适合复杂数据结构、大尺寸的文档化格式数据的存储和查询，可作为缓存，提高系统性能。对一些需要强事务性的系统还是关系型数据库合适，MongoDB不太合适。 学习资料 https://www.mongodb.com/ http://www.runoob.com/mongodb/mongodb-tutorial.html https://elemefe.gitbooks.io/mongodb/content/]]></content>
       <tags>
-        <tag>NOSQL</tag>
         <tag>MongoDB</tag>
+        <tag>NOSQL</tag>
       </tags>
   </entry>
   <entry>
