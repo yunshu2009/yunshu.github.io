@@ -111,7 +111,7 @@
 <meta property="og:site_name" content="云舒的个人博客">
 <meta property="og:description" content="目前 PHP 的最新版本是 7.2.9 ，从 PHP 5.6 到 PHP 7 发生了许多变化。在Mac系统下可用php-version工具来切换php版本。 参考资料：  http://php.net/manual/zh/appendices.php  https://mengkang.net/1019.html   一些PHP 7.0 新特性/变更7.0 新特性 null合并运算符  变量类型声">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2018-08-17T08:22:48.000Z">
+<meta property="og:updated_time" content="2018-08-19T08:39:07.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="PHP7新特性">
 <meta name="twitter:description" content="目前 PHP 的最新版本是 7.2.9 ，从 PHP 5.6 到 PHP 7 发生了许多变化。在Mac系统下可用php-version工具来切换php版本。 参考资料：  http://php.net/manual/zh/appendices.php  https://mengkang.net/1019.html   一些PHP 7.0 新特性/变更7.0 新特性 null合并运算符  变量类型声">
@@ -426,7 +426,9 @@
 <li><p>变量类型声明</p>
 </li>
 </ul>
+<p>变量类型声明可以有两种模式：强制（默认）和严格模式。类型参数可以定义为：字符串（string）、整形（int）、浮点型（float）以及布尔值（bool）。</p>
 <a id="more"></a>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">function sumOfInts(int ...$ints)</span><br><span class="line">&#123;</span><br><span class="line">    return array_sum($ints);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">var_dump(sumOfInts(2, &apos;3&apos;, 4.1)); // int(9)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">// 开启类型声明严格模式，declare 语句需要放在脚本第一行</span><br><span class="line">declare(strict_types=1);   </span><br><span class="line"></span><br><span class="line">function add(int $x, int $y)</span><br><span class="line">&#123;</span><br><span class="line"></span><br><span class="line">    return $x + $y;</span><br><span class="line">&#125;</span><br><span class="line">var_dump(add(2, 3));    //Fatal error: Argument 1 passed to add() must be of the type integer</span><br></pre></td></tr></table></figure>
 <ul>
 <li>返回值类型声明</li>
 </ul>
