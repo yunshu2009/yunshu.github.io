@@ -4,6 +4,75 @@
 
     
   <url>
+    <loc>http://yunshu.me/2018/08/19/%E4%BD%BF%E7%94%A8-Laravel-%E4%B8%8E-Elasticsearch-%E5%AE%9E%E7%8E%B0%E6%96%87%E7%AB%A0%E5%85%A8%E6%96%87%E6%A3%80%E7%B4%A2%E5%8A%9F%E8%83%BD/</loc>
+    <lastmod>2018-08-19T14:54:06.000Z</lastmod>
+    <data>
+        <display>
+        <title>使用 Laravel 与 Elasticsearch 实现文章全文检索功能</title>
+        <pubTime>2018-08-19T14:54:06.000Z</pubTime>
+        
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://yunshu.me/2018/08/19/%E6%90%AD%E5%BB%BA-composer-%E7%A7%81%E6%9C%89%E6%BA%90%E5%B9%B6%E5%8F%91%E5%B8%83%E8%87%AA%E5%B7%B1%E7%9A%84-composer-%E5%8C%85/</loc>
+    <lastmod>2018-08-19T14:42:00.000Z</lastmod>
+    <data>
+        <display>
+        <title>搭建 composer 私有源并发布自己的 composer 包</title>
+        <pubTime>2018-08-19T14:41:01.000Z</pubTime>
+        
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://yunshu.me/2018/08/19/%E6%90%AD%E5%BB%BA-Git-%E6%9C%8D%E5%8A%A1%E5%99%A8/</loc>
+    <lastmod>2018-08-19T14:36:07.000Z</lastmod>
+    <data>
+        <display>
+        <title>搭建 Git 服务器</title>
+        <pubTime>2018-08-19T13:27:08.000Z</pubTime>
+        
+        <tag>git</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://yunshu.me/2018/08/18/%E5%88%A9%E7%94%A8Swoole%E5%AE%9E%E7%8E%B0PHP-websocket-%E8%81%8A%E5%A4%A9%E5%AE%A4/</loc>
+    <lastmod>2018-08-19T13:21:11.000Z</lastmod>
+    <data>
+        <display>
+        <title>利用 Swoole 实现 PHP+websocket 聊天室</title>
+        <pubTime>2018-08-18T00:58:29.000Z</pubTime>
+        
+        <tag>PHP</tag>
+         
+        <tag>Swoole</tag>
+         
+         
+           
+             
+              <breadCrumb title="PHP" url="http://yunshu.me/categories/PHP/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://yunshu.me/2018/08/17/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%E6%80%BB%E7%BB%93/</loc>
     <lastmod>2018-08-19T10:58:49.000Z</lastmod>
     <data>
@@ -64,28 +133,6 @@
         
          
            
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://yunshu.me/2018/08/18/%E5%88%A9%E7%94%A8Swoole%E5%AE%9E%E7%8E%B0PHP-websocket-%E8%81%8A%E5%A4%A9%E5%AE%A4/</loc>
-    <lastmod>2018-08-18T04:33:04.000Z</lastmod>
-    <data>
-        <display>
-        <title>利用 Swoole 实现 PHP+websocket 聊天室</title>
-        <pubTime>2018-08-18T00:58:29.000Z</pubTime>
-        
-        <tag>PHP</tag>
-         
-        <tag>Swoole</tag>
-         
-         
-           
-             
-              <breadCrumb title="PHP" url="http://yunshu.me/categories/PHP/"/>
-          
         </display>
     </data>
     </url>

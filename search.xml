@@ -1,6 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[使用 Laravel 与 Elasticsearch 实现文章全文检索功能]]></title>
+    <url>%2F2018%2F08%2F19%2F%E4%BD%BF%E7%94%A8-Laravel-%E4%B8%8E-Elasticsearch-%E5%AE%9E%E7%8E%B0%E6%96%87%E7%AB%A0%E5%85%A8%E6%96%87%E6%A3%80%E7%B4%A2%E5%8A%9F%E8%83%BD%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title><![CDATA[搭建 composer 私有源并发布自己的 composer 包]]></title>
+    <url>%2F2018%2F08%2F19%2F%E6%90%AD%E5%BB%BA-composer-%E7%A7%81%E6%9C%89%E6%BA%90%E5%B9%B6%E5%8F%91%E5%B8%83%E8%87%AA%E5%B7%B1%E7%9A%84-composer-%E5%8C%85%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title><![CDATA[搭建 Git 服务器]]></title>
+    <url>%2F2018%2F08%2F19%2F%E6%90%AD%E5%BB%BA-Git-%E6%9C%8D%E5%8A%A1%E5%99%A8%2F</url>
+    <content type="text"><![CDATA[不知道为啥，使用 hexo 渲染本篇文章时，格式总是乱掉，所以将这篇文章放到简书了。 传送门：https://www.jianshu.com/p/786d93c56801]]></content>
+      <tags>
+        <tag>git</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[使用 django 开发一个微信文章阅览网站]]></title>
     <url>%2F2018%2F08%2F18%2F%E4%BD%BF%E7%94%A8-django-%E5%BC%80%E5%8F%91%E4%B8%80%E4%B8%AA%E5%BE%AE%E4%BF%A1%E6%96%87%E7%AB%A0%E9%98%85%E8%A7%88%E7%BD%91%E7%AB%99%2F</url>
     <content type="text"></content>
@@ -13,7 +31,7 @@
   <entry>
     <title><![CDATA[利用 Swoole 实现 PHP+websocket 聊天室]]></title>
     <url>%2F2018%2F08%2F18%2F%E5%88%A9%E7%94%A8Swoole%E5%AE%9E%E7%8E%B0PHP-websocket-%E8%81%8A%E5%A4%A9%E5%AE%A4%2F</url>
-    <content type="text"><![CDATA[关于 SwoolePHP语言的异步、并行、高性能网络通信框架，使用纯C语言编写，提供了PHP语言的异步多线程服务器，异步TCP/UDP网络客户端，异步MySQL，数据库连接池，AsyncTask，消息队列，毫秒定时器，异步文件读写，异步DNS查询。 支持的服务： HttpServer WebSocket Server TCP Server TCP Client Async-IO(异步) Task(定时任务) 官方文档：https://www.swoole.com/ 安装swoole123pecl install swooleecho &quot;extension=swoole.so&quot; &gt; /usr/local/php/etc/php.d/ext-swoole.iniservice php-fpm restart 开发一个简单的聊天室服务端 代码1234567891011121314151617181920&lt;?php//创建websocket服务器对象，监听0.0.0.0:9502端口$server = new swoole_websocket_server(&quot;0.0.0.0&quot;, 9502);//监听WebSocket连接打开事件$server-&gt;on(&apos;open&apos;, function (swoole_websocket_server $server, $request) &#123; echo &quot;server: handshake success with fd&#123;$request-&gt;fd&#125;\n&quot;; $GLOBALS[&apos;fd&apos;][] = $request-&gt;fd;&#125;);//监听WebSocket消息事件$server-&gt;on(&apos;message&apos;, function (swoole_websocket_server $server, $frame) &#123; $msg = &quot;receive from &#123;$frame-&gt;fd&#125;:&#123;$frame-&gt;data&#125;,opcode:&#123;$frame-&gt;opcode&#125;,fin:&#123;$frame-&gt;finish&#125;,fd:&#123;$frame-&gt;fd&#125;\n&quot;; echo $msg; foreach($GLOBALS[&apos;fd&apos;] as $fd)&#123; $server-&gt;push($fd, $msg); &#125;&#125;); 客户端 学习资料 easyswoole:https://github.com/easy-swoole/easyswoole 《Linux高性能服务器编程》]]></content>
+    <content type="text"><![CDATA[关于 SwoolePHP语言的异步、并行、高性能网络通信框架，使用纯C语言编写，提供了PHP语言的异步多线程服务器，异步TCP/UDP网络客户端，异步MySQL，数据库连接池，AsyncTask，消息队列，毫秒定时器，异步文件读写，异步DNS查询。 支持的服务： HttpServer WebSocket Server TCP Server TCP Client Async-IO(异步) Task(定时任务) 官方文档：https://www.swoole.com/ 安装swoole123pecl install swooleecho &quot;extension=swoole.so&quot; &gt; /usr/local/php/etc/php.d/ext-swoole.iniservice php-fpm restart 开发一个简单的聊天室服务端 代码1234567891011121314151617181920&lt;?php//创建websocket服务器对象，监听0.0.0.0:9502端口$server = new swoole_websocket_server(&quot;0.0.0.0&quot;, 9502);//监听WebSocket连接打开事件$server-&gt;on(&apos;open&apos;, function (swoole_websocket_server $server, $request) &#123; echo &quot;server: handshake success with fd&#123;$request-&gt;fd&#125;\n&quot;; $GLOBALS[&apos;fd&apos;][] = $request-&gt;fd;&#125;);//监听WebSocket消息事件$server-&gt;on(&apos;message&apos;, function (swoole_websocket_server $server, $frame) &#123; $msg = &quot;receive from &#123;$frame-&gt;fd&#125;:&#123;$frame-&gt;data&#125;,opcode:&#123;$frame-&gt;opcode&#125;,fin:&#123;$frame-&gt;finish&#125;,fd:&#123;$frame-&gt;fd&#125;\n&quot;; echo $msg; foreach($GLOBALS[&apos;fd&apos;] as $fd)&#123; $server-&gt;push($fd, $msg); &#125;&#125;); 客户端 代码参考：https://github.com/yunshu2009/swoole-src/blob/master/examples/websocket/client.html 学习资料 easyswoole:https://github.com/easy-swoole/easyswoole 《Linux高性能服务器编程》]]></content>
       <categories>
         <category>PHP</category>
       </categories>
