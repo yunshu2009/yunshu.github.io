@@ -4,6 +4,25 @@
 
     
   <url>
+    <loc>http://yunshu.me/2018/08/17/Redis%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</loc>
+    <lastmod>2018-08-20T03:59:26.000Z</lastmod>
+    <data>
+        <display>
+        <title>Redis学习笔记</title>
+        <pubTime>2018-08-16T23:12:08.000Z</pubTime>
+        
+        <tag>NOSQL</tag>
+         
+        <tag>Redis</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://yunshu.me/2018/08/19/%E6%90%AD%E5%BB%BA-composer-%E7%A7%81%E6%9C%89%E6%BA%90%E5%B9%B6%E5%8F%91%E5%B8%83%E8%87%AA%E5%B7%B1%E7%9A%84-composer-%E5%8C%85/</loc>
     <lastmod>2018-08-20T00:18:30.000Z</lastmod>
     <data>
@@ -211,25 +230,6 @@
         <pubTime>2018-04-04T05:40:26.000Z</pubTime>
         
         <tag>MySQL</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://yunshu.me/2018/08/17/Redis%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</loc>
-    <lastmod>2018-08-17T10:34:21.000Z</lastmod>
-    <data>
-        <display>
-        <title>Redis学习笔记</title>
-        <pubTime>2018-08-16T23:12:08.000Z</pubTime>
-        
-        <tag>NOSQL</tag>
-         
-        <tag>Redis</tag>
          
          
            
