@@ -4,8 +4,28 @@
 
     
   <url>
+    <loc>http://yunshu.me/2018/08/20/Nginx-%E7%9B%B8%E5%85%B3%E6%80%BB%E7%BB%93/</loc>
+    <lastmod>2018-08-20T09:49:48.000Z</lastmod>
+    <data>
+        <display>
+        <title>Nginx 相关总结</title>
+        <pubTime>2018-08-20T15:04:21.000Z</pubTime>
+        
+        <tag>Nginx</tag>
+         
+         
+           
+             
+              <breadCrumb title="Nginx" url="http://yunshu.me/categories/Nginx/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://yunshu.me/2018/08/17/Redis%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</loc>
-    <lastmod>2018-08-20T05:42:41.000Z</lastmod>
+    <lastmod>2018-08-20T06:33:40.000Z</lastmod>
     <data>
         <display>
         <title>Redis学习笔记</title>
@@ -29,21 +49,6 @@
         <display>
         <title>搭建 Composer 私有源并发布自己的 Composer 包</title>
         <pubTime>2018-08-19T14:41:01.000Z</pubTime>
-        
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://yunshu.me/2018/08/20/Nginx-%E7%9B%B8%E5%85%B3%E6%80%BB%E7%BB%93/</loc>
-    <lastmod>2018-08-19T15:04:41.000Z</lastmod>
-    <data>
-        <display>
-        <title>Nginx 相关总结</title>
-        <pubTime>2018-08-20T15:04:21.000Z</pubTime>
         
          
            

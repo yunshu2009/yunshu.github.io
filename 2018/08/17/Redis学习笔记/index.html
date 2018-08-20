@@ -112,7 +112,7 @@
 <meta property="og:description" content="什么是 Redis？Redis是一个开源的使用 ANSI C 语言编写、遵守BSD协议、基于内存并可持久化的 K-V 非关系型数据库。 Redis 和 Memcache的区别 Redis 数据类型丰富。Redis不仅仅支持简单的数据类型，还支持list、set、sortedset、hash等数据结构。  Redis可利用虚拟内存。Redis 当物理内存用完时，可以将一些很久没用到的 value 交">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="http://yunshu.me/2018/08/17/Redis学习笔记/redis1.png">
-<meta property="og:updated_time" content="2018-08-20T05:42:41.000Z">
+<meta property="og:updated_time" content="2018-08-20T06:33:40.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Redis学习笔记">
 <meta name="twitter:description" content="什么是 Redis？Redis是一个开源的使用 ANSI C 语言编写、遵守BSD协议、基于内存并可持久化的 K-V 非关系型数据库。 Redis 和 Memcache的区别 Redis 数据类型丰富。Redis不仅仅支持简单的数据类型，还支持list、set、sortedset、hash等数据结构。  Redis可利用虚拟内存。Redis 当物理内存用完时，可以将一些很久没用到的 value 交">
@@ -464,7 +464,7 @@
 <h2 id="Redis-同步机制"><a href="#Redis-同步机制" class="headerlink" title="Redis 同步机制"></a>Redis 同步机制</h2><p>Redis 可以使用主从同步，从从同步。第一次同步时，主节点做一次 bgsave，并同时将后续修改操作记录到内存 buffer，待完成后将 rdb 文件全量同步到复制节点，复制节点接受完成后将 rdb 镜像加载到内存。加载完成后，再通知主节点将期间修改的操作记录同步到复制节点进行重放就完成了同步过程。</p>
 <h2 id="Redis-事务"><a href="#Redis-事务" class="headerlink" title="Redis 事务"></a>Redis 事务</h2><p>Redis 开启事务后（执行 <code>multi</code>）后，执行 Redis 命令 后，会将 Redis 执行命令放到队列里，并不真正执行，执行 <code>exec</code> 后，会出现有的 Redis 命令执行成功，有的执行失败。Redis 中的事务不像 mysql 的事务，有一个命令执行失败，<code>commit</code>后，一组 sql 操作全部执行失败、回滚操作。</p>
 <p>使用 <code>discard</code> 会清空事务队列里的 Redis 命令，不执行 Redis 命令。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">#开启事务</span><br><span class="line">&gt; multi</span><br><span class="line"></span><br><span class="line">#提交事务</span><br><span class="line">&gt; exec</span><br><span class="line"></span><br><span class="line">#取消执行Redis命令</span><br><span class="line">&gt; discard</span><br><span class="line"></span><br><span class="line">#监视 key 值的变化, 如果key发生变化，事务取消</span><br><span class="line">&gt; watch key</span><br><span class="line"></span><br><span class="line">#取消监视 key 的变化</span><br><span class="line">&gt; unwatch</span><br><span class="line">`</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">#开启事务</span><br><span class="line">&gt; multi</span><br><span class="line"></span><br><span class="line">#提交事务</span><br><span class="line">&gt; exec</span><br><span class="line"></span><br><span class="line">#取消执行Redis命令</span><br><span class="line">&gt; discard</span><br><span class="line"></span><br><span class="line">#监视 key 值的变化, 如果key发生变化，事务取消</span><br><span class="line">&gt; watch key</span><br><span class="line"></span><br><span class="line">#取消监视 key 的变化</span><br><span class="line">&gt; unwatch</span><br></pre></td></tr></table></figure>
 <p>使用 <code>watch</code>命令 示例：<br><img src="/2018/08/17/Redis学习笔记/redis1.png" alt="Redis事务" title="Redis事务"></p>
 <h2 id="Redis集群"><a href="#Redis集群" class="headerlink" title="Redis集群"></a>Redis集群</h2><h2 id="PHP-操作-Redis"><a href="#PHP-操作-Redis" class="headerlink" title="PHP 操作 Redis"></a>PHP 操作 Redis</h2><p>PHP 操作 Redis，可查看 phpredis 的 github 仓库：<a href="https://github.com/phpredis/phpredis" target="_blank" rel="noopener">https://github.com/phpredis/phpredis</a></p>
 <h2 id="Python-中操作-Redis"><a href="#Python-中操作-Redis" class="headerlink" title="Python 中操作 Redis"></a>Python 中操作 Redis</h2><h2 id="Redis-客户端工具"><a href="#Redis-客户端工具" class="headerlink" title="Redis 客户端工具"></a>Redis 客户端工具</h2><!--more-->
@@ -718,7 +718,9 @@
                     
                       
                     
-                    <span class="site-state-item-count">1</span>
+                      
+                    
+                    <span class="site-state-item-count">2</span>
                     <span class="site-state-item-name">分类</span>
                   </a>
                 </div>
@@ -765,7 +767,9 @@
                     
                       
                     
-                    <span class="site-state-item-count">17</span>
+                      
+                    
+                    <span class="site-state-item-count">18</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
                 </div>
