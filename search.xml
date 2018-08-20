@@ -23,7 +23,7 @@
   <entry>
     <title><![CDATA[搭建 Composer 私有源并发布自己的 Composer 包]]></title>
     <url>%2F2018%2F08%2F19%2F%E6%90%AD%E5%BB%BA-composer-%E7%A7%81%E6%9C%89%E6%BA%90%E5%B9%B6%E5%8F%91%E5%B8%83%E8%87%AA%E5%B7%B1%E7%9A%84-composer-%E5%8C%85%2F</url>
-    <content type="text"><![CDATA[参考链接： Composer 文档 英文版https://getcomposer.org/doc/articles/handling-private-packages-with-satis.md 中文版https://laravel-china.org/docs/composer/2018/handling-private-packages-with-satis/2092 PHP PSR代码规范 英文版 https://www.php-fig.org/psr/ 中文版 https://laravel-china.org/docs/psr PHP 包仓库 https://packagist.org/ 其它 使用 satis 搭建一个私有的 Composer 包仓库 https://laravel-china.org/topics/1900/use-satis-to-build-a-private-composer-warehouse PHP创建自己的Composer包方法https://www.jb51.net/article/137923.htm]]></content>
+    <content type="text"><![CDATA[参考链接： Composer 文档 英文版https://getcomposer.org/doc/articles/handling-private-packages-with-satis.md 中文版https://laravel-china.org/docs/composer/2018/handling-private-packages-with-satis/2092 PHP PSR代码规范 英文版 https://www.php-fig.org/psr/ 中文版 https://laravel-china.org/docs/psr PHP 包仓库 https://packagist.org/ 其它 使用 satis 搭建一个私有的 Composer 包仓库https://laravel-china.org/topics/1900/use-satis-to-build-a-private-composer-warehouse PHP创建自己的Composer包方法https://www.jb51.net/article/137923.htm]]></content>
   </entry>
   <entry>
     <title><![CDATA[搭建 Git 服务器]]></title>
