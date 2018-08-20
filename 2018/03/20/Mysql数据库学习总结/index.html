@@ -1225,7 +1225,7 @@ mysql> show status like 'innodb_row_lock%';
       <script type="text/javascript">
       function renderGitment(){
         var gitment = new Gitmint({
-            id: <%= page.date %>,
+            id: decodeURI(window.location.pathname),
             owner: 'yunshu2009',
             repo: 'yunshu2009.github.io',
             
