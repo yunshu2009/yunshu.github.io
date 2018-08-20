@@ -103,18 +103,18 @@
   <meta name="keywords" content="Nginx," />
 
 
-<meta name="description" content="Nginx 基础Nginx 日志log_format指令用来设置日志的记录格式，它的语法如下：log_format name format {format …}其中name表示定义的格式名称，format表示定义的格式样式。 在 format 定义中可以添加 X-Forwarded-For 信息, 用来记录客户的真实 IP。更多信息科参考：https://www.cnblogs.com/kevin">
+<meta name="description" content="Nginx 基础Nginx 日志log_format指令用来设置日志的记录格式，它的语法如下：log_format name format {format …}其中name表示定义的格式名称，format表示定义的格式样式。 在 format 定义中可以添加 X-Forwarded-For 信息, 用来记录客户的真实 IP。更多信息可参考：https://www.cnblogs.com/kevin">
 <meta name="keywords" content="Nginx">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Nginx 相关总结">
 <meta property="og:url" content="http://yunshu.me/2018/08/20/Nginx-相关总结/index.html">
 <meta property="og:site_name" content="云舒的个人博客">
-<meta property="og:description" content="Nginx 基础Nginx 日志log_format指令用来设置日志的记录格式，它的语法如下：log_format name format {format …}其中name表示定义的格式名称，format表示定义的格式样式。 在 format 定义中可以添加 X-Forwarded-For 信息, 用来记录客户的真实 IP。更多信息科参考：https://www.cnblogs.com/kevin">
+<meta property="og:description" content="Nginx 基础Nginx 日志log_format指令用来设置日志的记录格式，它的语法如下：log_format name format {format …}其中name表示定义的格式名称，format表示定义的格式样式。 在 format 定义中可以添加 X-Forwarded-For 信息, 用来记录客户的真实 IP。更多信息可参考：https://www.cnblogs.com/kevin">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2018-08-20T09:49:48.000Z">
+<meta property="og:updated_time" content="2018-08-20T09:51:20.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Nginx 相关总结">
-<meta name="twitter:description" content="Nginx 基础Nginx 日志log_format指令用来设置日志的记录格式，它的语法如下：log_format name format {format …}其中name表示定义的格式名称，format表示定义的格式样式。 在 format 定义中可以添加 X-Forwarded-For 信息, 用来记录客户的真实 IP。更多信息科参考：https://www.cnblogs.com/kevin">
+<meta name="twitter:description" content="Nginx 基础Nginx 日志log_format指令用来设置日志的记录格式，它的语法如下：log_format name format {format …}其中name表示定义的格式名称，format表示定义的格式样式。 在 format 定义中可以添加 X-Forwarded-For 信息, 用来记录客户的真实 IP。更多信息可参考：https://www.cnblogs.com/kevin">
 
 
 
@@ -431,7 +431,7 @@
 
       
         <h2 id="Nginx-基础"><a href="#Nginx-基础" class="headerlink" title="Nginx 基础"></a>Nginx 基础</h2><h3 id="Nginx-日志"><a href="#Nginx-日志" class="headerlink" title="Nginx 日志"></a>Nginx 日志</h3><p>log_format指令用来设置日志的记录格式，它的语法如下：<br>log_format name format {format …}<br>其中name表示定义的格式名称，format表示定义的格式样式。</p>
-<p>在 format 定义中可以添加 X-Forwarded-For 信息, 用来记录客户的真实 IP。更多信息科参考：<a href="https://www.cnblogs.com/kevingrace/p/5893499.html。" target="_blank" rel="noopener">https://www.cnblogs.com/kevingrace/p/5893499.html。</a></p>
+<p>在 format 定义中可以添加 X-Forwarded-For 信息, 用来记录客户的真实 IP。更多信息可参考：<a href="https://www.cnblogs.com/kevingrace/p/5893499.html。" target="_blank" rel="noopener">https://www.cnblogs.com/kevingrace/p/5893499.html。</a></p>
 <p>例如：nginx 的 负载均衡代理层使用过的一个配置添加一条 log_format：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">log_format  main  &apos;$remote_addr - $remote_user [$time_local] &quot;$request&quot; &apos;</span><br><span class="line">                  &apos;$status $body_bytes_sent &quot;$http_referer&quot; &apos;</span><br><span class="line">                  &apos;$http_user_agent $http_x_forwarded_for $request_time $upstream_response_time $upstream_addr $upstream_status&apos;;</span><br></pre></td></tr></table></figure>
 <a id="more"></a>
