@@ -425,7 +425,6 @@
           <h2 id="Nginx-基础"><a href="#Nginx-基础" class="headerlink" title="Nginx 基础"></a>Nginx 基础</h2><h3 id="Nginx-日志"><a href="#Nginx-日志" class="headerlink" title="Nginx 日志"></a>Nginx 日志</h3><p>log_format指令用来设置日志的记录格式，它的语法如下：<br>log_format name format {format …}<br>其中name表示定义的格式名称，format表示定义的格式样式。</p>
 <p>在 format 定义中可以添加 X-Forwarded-For 信息, 用来记录客户的真实 IP。更多信息可参考：<a href="https://www.cnblogs.com/kevingrace/p/5893499.html。" target="_blank" rel="noopener">https://www.cnblogs.com/kevingrace/p/5893499.html。</a></p>
 <p>例如：nginx 的 负载均衡代理层使用过的一个配置添加一条 log_format：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">log_format  main  &apos;$remote_addr - $remote_user [$time_local] &quot;$request&quot; &apos;</span><br><span class="line">                  &apos;$status $body_bytes_sent &quot;$http_referer&quot; &apos;</span><br><span class="line">                  &apos;$http_user_agent $http_x_forwarded_for $request_time $upstream_response_time $upstream_addr $upstream_status&apos;;</span><br></pre></td></tr></table></figure>
           <!--noindex-->
           <div class="post-button text-center">
             <a class="btn" href="/2018/08/20/Nginx-相关总结/#more" rel="contents">
