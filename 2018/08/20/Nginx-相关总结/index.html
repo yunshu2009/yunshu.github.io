@@ -111,10 +111,13 @@
 <meta property="og:site_name" content="云舒的个人博客">
 <meta property="og:description" content="Nginx 基础Nginx 日志log_format指令用来设置日志的记录格式，它的语法如下：log_format name format {format …}其中name表示定义的格式名称，format表示定义的格式样式。 在 format 定义中可以添加 X-Forwarded-For 信息, 用来记录客户的真实 IP。更多信息可参考：https://www.cnblogs.com/kevin">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2018-08-20T09:53:47.000Z">
+<meta property="og:image" content="http://yunshu.me/2018/08/20/Nginx-相关总结/nginx1.png">
+<meta property="og:image" content="http://yunshu.me/2018/08/20/Nginx-相关总结/nginx2.png">
+<meta property="og:updated_time" content="2018-08-21T11:23:06.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Nginx 相关总结">
 <meta name="twitter:description" content="Nginx 基础Nginx 日志log_format指令用来设置日志的记录格式，它的语法如下：log_format name format {format …}其中name表示定义的格式名称，format表示定义的格式样式。 在 format 定义中可以添加 X-Forwarded-For 信息, 用来记录客户的真实 IP。更多信息可参考：https://www.cnblogs.com/kevin">
+<meta name="twitter:image" content="http://yunshu.me/2018/08/20/Nginx-相关总结/nginx1.png">
 
 
 
@@ -452,8 +455,26 @@
 <h4 id="防盗链"><a href="#防盗链" class="headerlink" title="防盗链"></a>防盗链</h4><p>基于 http_refer 防盗链配置：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">location ~ .*\.(wma|wmv|asf|mp3|mmf|zip|rar|jpg|gif|png|swf|flv|mp4)$ &#123;</span><br><span class="line">   valid_referers none blocked *.yunshu.me;   //valid_referers 表示允许那些情况可以访问，none 表示不带referer头的情况，blocked 表示没有携带协议信息的情况，“*.yunshu.me”表示所有 yunshu.me 二级域名都可访问</span><br><span class="line">   if ($invalid_referer) &#123;</span><br><span class="line">       rewrite ^/ http://www.yunshu.me;</span><br><span class="line">       return 403;</span><br><span class="line">   &#125;</span><br></pre></td></tr></table></figure>
 <p>防盗链测试：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">//“-I” 表示只返回 http 头信息，“-e”用于指定 referer 头</span><br><span class="line">curl -e http://www.abc.com -I http://yunshu.me/3/s26676928.jpg</span><br><span class="line"></span><br><span class="line">curl -e http://www.abc.com -I http://yunshu.me/3/s26676928.jpg</span><br></pre></td></tr></table></figure>
-<h3 id="代理服务"><a href="#代理服务" class="headerlink" title="代理服务"></a>代理服务</h3><h3 id="负载均衡服务"><a href="#负载均衡服务" class="headerlink" title="负载均衡服务"></a>负载均衡服务</h3><h3 id="缓存服务"><a href="#缓存服务" class="headerlink" title="缓存服务"></a>缓存服务</h3><h2 id="Nginx-深入学习"><a href="#Nginx-深入学习" class="headerlink" title="Nginx 深入学习"></a>Nginx 深入学习</h2><h2 id="Nginx-结构篇"><a href="#Nginx-结构篇" class="headerlink" title="Nginx 结构篇"></a>Nginx 结构篇</h2>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">//“-I” 表示只返回 http 头信息，“-e”用于指定 referer 头</span><br><span class="line">curl -e http://www.abc.com -I http://yunshu.me/3/s26676928.jpg</span><br><span class="line">//不带 referer 头</span><br><span class="line">curl -I http://yunshu.me/3/s26676928.jpg</span><br></pre></td></tr></table></figure>
+<h3 id="代理服务"><a href="#代理服务" class="headerlink" title="代理服务"></a>代理服务</h3><p>正向代理：<br><img src="/2018/08/20/Nginx-相关总结/nginx1.png" alt="nginx正向代理" title="nginx正向代理"></p>
+<p>场景：使用代理服务器翻墙。</p>
+<p>反向代理：</p>
+<p><img src="/2018/08/20/Nginx-相关总结/nginx2.png" alt="nginx正向代理" title="nginx正向代理"></p>
+<p>场景：使用反向代理实现负载均衡</p>
+<p>正向代理和反向代理的区别：</p>
+<p>代理的对象不一样，正向代理代理的是客户端，为了客户端能访问目标网站。反向代理的对象是服务端，代理设置是在服务端的，为了服务端能返回客户端所需数据。</p>
+<p>配置实例：</p>
+<p>反向代理：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">//当服务器接受到请求后，将请求发送到 8080 端口。</span><br><span class="line">    location /</span><br><span class="line">    &#123;</span><br><span class="line">        proxy_pass http://127.0.0.1:8080;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+<p>正向代理:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">server</span><br><span class="line">&#123;</span><br><span class="line">    resolver 8.8.8.8;</span><br><span class="line">    listen 82;</span><br><span class="line">    location /</span><br><span class="line">    &#123;</span><br><span class="line">        proxy_pass http://$http_host$request_uri;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>nginx 实现正向代理上网，有三个关键点必须注意，其余的配置跟普通的nginx一样<br>1.增加dns解析resolver</p>
+<p>2.增加无 server_name 名的 server</p>
+<p>3.proxy_pass指令</p>
+<p>正向代理测试：</p>
+<p>curl设置代理访问: curl -x ip:82 test.com<br>wget设置代理访问 wget -Y on -e “http_proxy=<a href="http://ip:82" target="_blank" rel="noopener">http://ip:82</a>“ “test.com”</p>
+<p>代理配置更多配置参考：<a href="http://nginx.org/en/docs/http/ngx_http_proxy_module.html" target="_blank" rel="noopener">http://nginx.org/en/docs/http/ngx_http_proxy_module.html</a></p>
+<h3 id="负载均衡服务"><a href="#负载均衡服务" class="headerlink" title="负载均衡服务"></a>负载均衡服务</h3><h3 id="缓存服务"><a href="#缓存服务" class="headerlink" title="缓存服务"></a>缓存服务</h3><h2 id="Nginx-深入学习篇"><a href="#Nginx-深入学习篇" class="headerlink" title="Nginx 深入学习篇"></a>Nginx 深入学习篇</h2><h2 id="Nginx-架构篇"><a href="#Nginx-架构篇" class="headerlink" title="Nginx 架构篇"></a>Nginx 架构篇</h2>
       
     </div>
 
@@ -826,7 +847,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Nginx-基础"><span class="nav-number">1.</span> <span class="nav-text">Nginx 基础</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Nginx-日志"><span class="nav-number">1.1.</span> <span class="nav-text">Nginx 日志</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#场景应用"><span class="nav-number">2.</span> <span class="nav-text">场景应用</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#静态资源web服务"><span class="nav-number">2.1.</span> <span class="nav-text">静态资源web服务</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#一些优化配置："><span class="nav-number">2.1.1.</span> <span class="nav-text">一些优化配置：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#浏览器缓存"><span class="nav-number">2.1.2.</span> <span class="nav-text">浏览器缓存</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#跨域访问"><span class="nav-number">2.1.3.</span> <span class="nav-text">跨域访问</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#防盗链"><span class="nav-number">2.1.4.</span> <span class="nav-text">防盗链</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#代理服务"><span class="nav-number">2.2.</span> <span class="nav-text">代理服务</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#负载均衡服务"><span class="nav-number">2.3.</span> <span class="nav-text">负载均衡服务</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#缓存服务"><span class="nav-number">2.4.</span> <span class="nav-text">缓存服务</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Nginx-深入学习"><span class="nav-number">3.</span> <span class="nav-text">Nginx 深入学习</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Nginx-结构篇"><span class="nav-number">4.</span> <span class="nav-text">Nginx 结构篇</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Nginx-基础"><span class="nav-number">1.</span> <span class="nav-text">Nginx 基础</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Nginx-日志"><span class="nav-number">1.1.</span> <span class="nav-text">Nginx 日志</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#场景应用"><span class="nav-number">2.</span> <span class="nav-text">场景应用</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#静态资源web服务"><span class="nav-number">2.1.</span> <span class="nav-text">静态资源web服务</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#一些优化配置："><span class="nav-number">2.1.1.</span> <span class="nav-text">一些优化配置：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#浏览器缓存"><span class="nav-number">2.1.2.</span> <span class="nav-text">浏览器缓存</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#跨域访问"><span class="nav-number">2.1.3.</span> <span class="nav-text">跨域访问</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#防盗链"><span class="nav-number">2.1.4.</span> <span class="nav-text">防盗链</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#代理服务"><span class="nav-number">2.2.</span> <span class="nav-text">代理服务</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#负载均衡服务"><span class="nav-number">2.3.</span> <span class="nav-text">负载均衡服务</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#缓存服务"><span class="nav-number">2.4.</span> <span class="nav-text">缓存服务</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Nginx-深入学习篇"><span class="nav-number">3.</span> <span class="nav-text">Nginx 深入学习篇</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Nginx-架构篇"><span class="nav-number">4.</span> <span class="nav-text">Nginx 架构篇</span></a></li></ol></div>
             
 
           </div>
