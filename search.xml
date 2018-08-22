@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[docker 学习实践]]></title>
+    <url>%2F2018%2F08%2F22%2Fdocker-%E5%AD%A6%E4%B9%A0%E5%AE%9E%E8%B7%B5%2F</url>
+    <content type="text"><![CDATA[docker 介绍Docker 是一个开源的应用容器引擎，基于 Go 语言 并遵从Apache2.0协议开源。 Docker 可以让开发者打包他们的应用以及依赖包到一个轻量级、可移植的容器中，然后发布到任何流行的 Linux 机器上，也可以实现虚拟化。容器是完全使用沙箱机制，相互之间不会有任何接口（类似 iPhone 的 App）。 在 Docker 中，一个容器对应着一个服务。比如我们的系统有web容器，mysql容器、redis容器。每一个容器的数据和配置文件都是在宿主主机上面，通过 volumes 挂载到容器的相应文件夹中（我们在 ./docker-compose.yml 配置文件中的 volumes 做了宿主主机文件和容器主机文件的映射） docker参考文档英文文档https://docs.docker.com/ 中文文档https://docs.docker-cn.com/ http://www.docker.org.cn/page/resources.html 其它文档初识 docker 搭建自己的开发环境 https://laravel-china.org/articles/10170/the-first-docker-to-build-their-own-development-environment 自建 Laravel 的 Docker 开发环境 https://laravel-china.org/articles/14767/self-built-laravel-docker-development-environment docker 命令1234567891011121314151617181920212223#启动docker服务service docker start#构建镜像chmod 755 /usr/local/bin/docker-composedocker-compose build##运行docker容器docker-compose updocker-compose up -d（后台运行）##查看compose启动的各个容器的状态docker-compose ps##进入某个容器,譬如phpdocker-compose exec php bash#退出某个容器exit#停止 docker 容器docker-compose stop OK. 后续不断完善~]]></content>
+  </entry>
+  <entry>
     <title><![CDATA[php 代码自动部署方案]]></title>
     <url>%2F2018%2F08%2F22%2Fphp-%E4%BB%A3%E7%A0%81%E8%87%AA%E5%8A%A8%E9%83%A8%E7%BD%B2%E6%96%B9%E6%A1%88%2F</url>
     <content type="text"><![CDATA[方案一 使用 gitlab ci 自动部署参考链接：https://blog.csdn.net/hxpjava1/article/details/78514999 附：一份示例配置 1234567891011121314stages: - deploydeploy: stage: deploy script: - sudo cp -a . /data/wwwroot/my-project - cd /data/wwwroot/my-project - sudo composer install - sudo cp .env.example .env - sudo chmod 777 -R /data/wwwroot/my-project/runtime only: - dev tags: - yunshudev 方案二 使用 deloyer 部署参考链接： https://laravel-china.org/articles/13242/another-introduction-to-the-use-of-deployer]]></content>
@@ -73,6 +78,14 @@
       <tags>
         <tag>设计模式</tag>
         <tag>计算机基础</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[Mycat 数据库中间件使用]]></title>
+    <url>%2F2018%2F08%2F17%2Fmycat-%E6%95%B0%E6%8D%AE%E5%BA%93%E4%B8%AD%E9%97%B4%E4%BB%B6%E4%BD%BF%E7%94%A8%2F</url>
+    <content type="text"></content>
+      <tags>
+        <tag>mysql</tag>
       </tags>
   </entry>
   <entry>
