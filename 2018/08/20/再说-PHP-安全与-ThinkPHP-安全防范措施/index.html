@@ -110,7 +110,7 @@
 <meta property="og:site_name" content="云舒的个人博客">
 <meta property="og:description" content="php 应用安全include 安全如果要求用户输入文件，然后在 php 里对文件进行包含，就要注意include 安全防范。 防范措施：  使用basename() 返回路径中的文件名部分  使用realpath()，将相对路径转换为绝对路径">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2018-08-22T02:19:07.000Z">
+<meta property="og:updated_time" content="2018-08-22T02:23:31.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="再说 PHP 安全与 ThinkPHP 安全防范措施">
 <meta name="twitter:description" content="php 应用安全include 安全如果要求用户输入文件，然后在 php 里对文件进行包含，就要注意include 安全防范。 防范措施：  使用basename() 返回路径中的文件名部分  使用realpath()，将相对路径转换为绝对路径">
@@ -447,11 +447,16 @@
 <p>PHP 漏洞检测扩展 taint ，可用于检测 XSS , SQL 注入， shell 注入等，可以在开发时使用。链接：<a href="http://pecl.php.net/package/taint" target="_blank" rel="noopener">http://pecl.php.net/package/taint</a></p>
 <h2 id="sql-注入"><a href="#sql-注入" class="headerlink" title="sql 注入"></a>sql 注入</h2><p>通过把 sql 命令插入到 Web 通过表单提交或通过请求的查询字符串，进行通过代码执行恶意的 sql 语句。</p>
 <p>sql注入示例：</p>
-<p>查询mysql版本:<br>SELECT title,content FROM <code>article</code> WHERE <code>id</code>=‘-1’ union select version(),2 – ’</p>
-<p>查询当前连接的数据库<br>SELECT title,content FROM <code>article</code> WHERE <code>id</code>=‘-1’ union select database(),2 – ’</p>
-<p>查询数据库结构:<br>SELECT <code>title</code>,<code>content</code> FROM <code>article</code> WHERE <code>id</code>=‘-1’ union1, select (SELECT (@) FROM (SELECT(@:=0x00),(SELECT (@) FROM (information_schema.columns) WHERE (table_schema&gt;=@) AND (@)IN (@:=CONCAT(@,0x0a,‘ [ ’,table_schema,‘ ] &gt;’,table_name,‘ &gt; ’,column_name))))x) –’</p>
-<p>查询用户名密码:<br>SELECT title,content FROM <code>article</code> WHERE <code>id</code>=‘-1’ union select username,password from user– ’</p>
-<p>万能登录密码:<br>SELECT * FROM <code>user</code> WHERE <code>username</code>=‘admin’ – ’ AND <code>password</code>=‘xxxx’ 查看文件:<br>SELECT title,content FROM <code>article</code> WHERE <code>id</code>=‘-1’ union select 1,load_file(‘/etc/passwd’) – ’</p>
+<p>查询mysql版本:</p>
+<p>SELECT title,content FROM <code>article</code> WHERE <code>id</code>=‘-1’ union select version(),2 – ’</p>
+<p>查询当前连接的数据库</p>
+<p>SELECT title,content FROM <code>article</code> WHERE <code>id</code>=‘-1’ union select database(),2 – ’</p>
+<p>查询数据库结构:</p>
+<p>SELECT <code>title</code>,<code>content</code> FROM <code>article</code> WHERE <code>id</code>=‘-1’ union1, select (SELECT (@) FROM (SELECT(@:=0x00),(SELECT (@) FROM (information_schema.columns) WHERE (table_schema&gt;=@) AND (@)IN (@:=CONCAT(@,0x0a,‘ [ ’,table_schema,‘ ] &gt;’,table_name,‘ &gt; ’,column_name))))x) –’</p>
+<p>查询用户名密码</p>
+<p>SELECT title,content FROM <code>article</code> WHERE <code>id</code>=‘-1’ union select username,password from user– </p>
+<p>万能登录密码</p>
+<p>SELECT * FROM <code>user</code> WHERE <code>username</code>=‘admin’ – ’ AND <code>password</code>=‘xxxx’ 查看文件:<br>SELECT title,content FROM <code>article</code> WHERE <code>id</code>=‘-1’ union select 1,load_file(‘/etc/passwd’) – ’</p>
 <p>防范措施：</p>
 <ul>
 <li>通过字段过滤</li>
