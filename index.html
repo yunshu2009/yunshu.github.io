@@ -404,9 +404,8 @@
 
       
         
-          <h2 id="docker-介绍"><a href="#docker-介绍" class="headerlink" title="docker 介绍"></a>docker 介绍</h2><p>Docker 是一个开源的应用容器引擎，基于 Go 语言 并遵从Apache2.0协议开源。</p>
-<p>Docker 可以让开发者打包他们的应用以及依赖包到一个轻量级、可移植的容器中，然后发布到任何流行的 Linux 机器上，也可以实现虚拟化。容器是完全使用沙箱机制，相互之间不会有任何接口（类似 iPhone 的 App）。</p>
-<p>在 Docker 中，一个容器对应着一个服务。比如我们的系统有web容器，mysql容器、redis容器。每一个容器的数据和配置文件都是在宿主主机上面，通过 volumes 挂载到容器的相应文件夹中（我们在 ./docker-compose.yml 配置文件中的 volumes 做了宿主主机文件和容器主机文件的映射）</p>
+          <h2 id="docker-介绍"><a href="#docker-介绍" class="headerlink" title="docker 介绍"></a>docker 介绍</h2><p>docker 是一个开源的应用容器引擎，使用 docker 可以轻松地创建一个可移植的、自给自足的容器。开发者在本地编译测试通过的容器可以直接在服务器生成环境上部署。</p>
+<p>在 docker 中，一个容器对应着一个服务。比如我们的系统有web容器，mysql容器、redis容器。每一个容器的数据和配置文件都是在宿主主机上面，通过 volumes 挂载到容器的相应文件夹中（我们在 ./docker-compose.yml 配置文件中的 volumes 做了宿主主机文件和容器主机文件的映射）</p>
           <!--noindex-->
           <div class="post-button text-center">
             <a class="btn" href="/2018/08/22/docker-学习实践/#more" rel="contents">

@@ -103,17 +103,17 @@
   <meta name="keywords" content="技术博客,php,java,python,go" />
 
 
-<meta name="description" content="docker 介绍Docker 是一个开源的应用容器引擎，基于 Go 语言 并遵从Apache2.0协议开源。 Docker 可以让开发者打包他们的应用以及依赖包到一个轻量级、可移植的容器中，然后发布到任何流行的 Linux 机器上，也可以实现虚拟化。容器是完全使用沙箱机制，相互之间不会有任何接口（类似 iPhone 的 App）。 在 Docker 中，一个容器对应着一个服务。比如我们的系统有w">
+<meta name="description" content="docker 介绍docker 是一个开源的应用容器引擎，使用 docker 可以轻松地创建一个可移植的、自给自足的容器。开发者在本地编译测试通过的容器可以直接在服务器生成环境上部署。 在 docker 中，一个容器对应着一个服务。比如我们的系统有web容器，mysql容器、redis容器。每一个容器的数据和配置文件都是在宿主主机上面，通过 volumes 挂载到容器的相应文件夹中（我们在 ./d">
 <meta property="og:type" content="article">
 <meta property="og:title" content="docker 学习实践">
 <meta property="og:url" content="http://yunshu.me/2018/08/22/docker-学习实践/index.html">
 <meta property="og:site_name" content="云舒的个人博客">
-<meta property="og:description" content="docker 介绍Docker 是一个开源的应用容器引擎，基于 Go 语言 并遵从Apache2.0协议开源。 Docker 可以让开发者打包他们的应用以及依赖包到一个轻量级、可移植的容器中，然后发布到任何流行的 Linux 机器上，也可以实现虚拟化。容器是完全使用沙箱机制，相互之间不会有任何接口（类似 iPhone 的 App）。 在 Docker 中，一个容器对应着一个服务。比如我们的系统有w">
+<meta property="og:description" content="docker 介绍docker 是一个开源的应用容器引擎，使用 docker 可以轻松地创建一个可移植的、自给自足的容器。开发者在本地编译测试通过的容器可以直接在服务器生成环境上部署。 在 docker 中，一个容器对应着一个服务。比如我们的系统有web容器，mysql容器、redis容器。每一个容器的数据和配置文件都是在宿主主机上面，通过 volumes 挂载到容器的相应文件夹中（我们在 ./d">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2018-08-22T15:44:49.000Z">
+<meta property="og:updated_time" content="2018-08-22T23:54:38.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="docker 学习实践">
-<meta name="twitter:description" content="docker 介绍Docker 是一个开源的应用容器引擎，基于 Go 语言 并遵从Apache2.0协议开源。 Docker 可以让开发者打包他们的应用以及依赖包到一个轻量级、可移植的容器中，然后发布到任何流行的 Linux 机器上，也可以实现虚拟化。容器是完全使用沙箱机制，相互之间不会有任何接口（类似 iPhone 的 App）。 在 Docker 中，一个容器对应着一个服务。比如我们的系统有w">
+<meta name="twitter:description" content="docker 介绍docker 是一个开源的应用容器引擎，使用 docker 可以轻松地创建一个可移植的、自给自足的容器。开发者在本地编译测试通过的容器可以直接在服务器生成环境上部署。 在 docker 中，一个容器对应着一个服务。比如我们的系统有web容器，mysql容器、redis容器。每一个容器的数据和配置文件都是在宿主主机上面，通过 volumes 挂载到容器的相应文件夹中（我们在 ./d">
 
 
 
@@ -411,9 +411,8 @@
       
 
       
-        <h2 id="docker-介绍"><a href="#docker-介绍" class="headerlink" title="docker 介绍"></a>docker 介绍</h2><p>Docker 是一个开源的应用容器引擎，基于 Go 语言 并遵从Apache2.0协议开源。</p>
-<p>Docker 可以让开发者打包他们的应用以及依赖包到一个轻量级、可移植的容器中，然后发布到任何流行的 Linux 机器上，也可以实现虚拟化。容器是完全使用沙箱机制，相互之间不会有任何接口（类似 iPhone 的 App）。</p>
-<p>在 Docker 中，一个容器对应着一个服务。比如我们的系统有web容器，mysql容器、redis容器。每一个容器的数据和配置文件都是在宿主主机上面，通过 volumes 挂载到容器的相应文件夹中（我们在 ./docker-compose.yml 配置文件中的 volumes 做了宿主主机文件和容器主机文件的映射）</p>
+        <h2 id="docker-介绍"><a href="#docker-介绍" class="headerlink" title="docker 介绍"></a>docker 介绍</h2><p>docker 是一个开源的应用容器引擎，使用 docker 可以轻松地创建一个可移植的、自给自足的容器。开发者在本地编译测试通过的容器可以直接在服务器生成环境上部署。</p>
+<p>在 docker 中，一个容器对应着一个服务。比如我们的系统有web容器，mysql容器、redis容器。每一个容器的数据和配置文件都是在宿主主机上面，通过 volumes 挂载到容器的相应文件夹中（我们在 ./docker-compose.yml 配置文件中的 volumes 做了宿主主机文件和容器主机文件的映射）</p>
 <a id="more"></a>
 <h2 id="docker参考文档"><a href="#docker参考文档" class="headerlink" title="docker参考文档"></a>docker参考文档</h2><h3 id="英文文档"><a href="#英文文档" class="headerlink" title="英文文档"></a>英文文档</h3><p><a href="https://docs.docker.com/" target="_blank" rel="noopener">https://docs.docker.com/</a></p>
 <h3 id="中文文档"><a href="#中文文档" class="headerlink" title="中文文档"></a>中文文档</h3><p><a href="https://docs.docker-cn.com/" target="_blank" rel="noopener">https://docs.docker-cn.com/</a></p>
