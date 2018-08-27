@@ -39,7 +39,7 @@
   <entry>
     <title><![CDATA[使用 Laravel 与 Elasticsearch 实现文章全文检索功能]]></title>
     <url>%2F2018%2F08%2F19%2F%E4%BD%BF%E7%94%A8-Laravel-%E4%B8%8E-Elasticsearch-%E5%AE%9E%E7%8E%B0%E6%96%87%E7%AB%A0%E5%85%A8%E6%96%87%E6%A3%80%E7%B4%A2%E5%8A%9F%E8%83%BD%2F</url>
-    <content type="text"></content>
+    <content type="text"><![CDATA[Ealsticsearch是个开源的全文搜索引擎，可以用它来解决 mysql like 查询的低效问题。Elasticsearch 提供 REST API 供客户端操作。 基本概念 索引（index），相当于 MySQL 中的 Database（数据库） 类型（type），相当于 MySQL 中的 Table（表） 文档（document），相当于 MySQL 中的 Row （行） 字段（Field），相当于 MySQL 中的 Column （列） 更多 Elasticsearch 参考资料Elasticsearch: 权威指南 - 官方中文文档 全文搜索引擎 Elasticsearch 入门教程 - 阮一峰 Laravel Scout + Elasticsearch + ik 分词 使用「Laravel Scout + Elasticsearch + ik 分词」DEMO]]></content>
   </entry>
   <entry>
     <title><![CDATA[搭建 Composer 私有源并发布自己的 Composer 包]]></title>
